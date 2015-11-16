@@ -1,0 +1,973 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,canvas,img,svg,video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+/* =================================================================================
+   Joshua Heagle's custom styles for Joshua Web Strategy
+   ================================================================================= */
+
+/* -------------------------------------------
+        General styles section
+   -------------------------------------------*/
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+/* -------------------------------------------
+        Page controls styles section
+   -------------------------------------------*/
+.control {
+    position: fixed;
+    right: 4%;
+    height: 100%;
+    width: auto;
+    max-height: 50px;
+    z-index: 999;
+    display: none;
+    transition: all 0.2s linear;
+}
+
+.control img {
+    height: 75%;
+    width: auto;
+    max-height: 50px;
+}
+
+.control:hover,.menu li:hover {
+    opacity: 0.6
+}
+
+.control a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.up-arrow {
+    top: 45%;
+    bottom: 55%;
+}
+
+.down-arrow {
+    top: 55%;
+    bottom: 45%;
+}
+
+/* -------------------------------------------
+        Header styles section
+   -------------------------------------------*/
+header {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 140px;
+    z-index: 9999;
+    min-width: 256px;
+    overflow: auto;
+}
+
+h1 {
+    height: 0;
+    position: relative;
+    top: 0;
+    left: -999999px;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------
+        Menu styles section
+   -------------------------------------------*/
+.menu {
+    margin: 0;
+    padding: 4px;
+    text-align: left;
+    width: 100px;
+    position: fixed;
+    top: 76px;
+    left: 20px;
+    right: 0;
+    transition: width .4s linear;
+}
+
+.menu .menu-btn {
+    display: block;
+    width: 100px;
+}
+
+.menu a {
+    color: #00ccff;
+    font-size: 16px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: background-color .3s linear;
+}
+
+.menu li:not(.menu-btn){
+    display: none;
+}
+
+.menu .current {
+    border: 1px solid #fff;
+    background-color: #00ccff;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 16px;
+    transition: color 0.4s linear;
+}
+
+.menu .current a {
+    color: #fff;
+    padding: 9px 15px;
+}
+
+.menu:active li,.menu:hover li {
+    display: block;
+}
+
+.menu:active .menu-btn,.menu:hover .menu-btn {
+    margin-left: 22px;
+}
+
+.menu li:hover {
+    border: 1px solid #fff;
+    background-color: #00ccff;
+}
+
+.menu li:hover a {
+    color: #fff;
+    padding: 9px 15px;
+}
+
+/* -------------------------------------------
+        Main Content and Layouts styles section
+   -------------------------------------------*/
+.section {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 100px;
+    padding: 70px 0 40px;
+    border-radius: 18px;
+    border-bottom: 4px solid #ccc;
+    position: relative;
+    z-index: 0;
+}
+
+.section:first-child {
+    padding: 130px 0 40px;
+}
+
+.column {
+    display: inline-block;
+}
+
+.column label {
+    min-width: 100px;
+    width: 140px;
+}
+
+.column .form-group {
+    clear: both;
+}
+
+.column .form-group label {
+    margin-top: -5px;
+}
+
+.column .form-group *, .doctor-locations .form-group * {
+    float: right;
+}
+
+/* -------------------------------------------
+        Input styles section
+   -------------------------------------------*/
+label {
+    color: #00ccff;
+}
+
+input,textarea,select {
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #00ccff;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s
+        ease-in-out 0s;
+}
+
+input[type='text'],input[type='url'],input[type='tel'],input[type='email'],textarea,select {
+    min-width: 200px;
+}
+
+input[type='time'] {
+    width: 100px;
+    margin: 0 0 10px;
+}
+
+input[type='button'] {
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    background-color: #75B044;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+input[type='submit'] {
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    background-color: #75B044;
+    color: #fff;
+    font-weight: 700;
+    width: 70%;
+    padding: 16px 0;
+}
+
+input:focus,textarea:focus,select:focus {
+    border-color: #66AFE9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+        rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
+select option {
+    color: #75B044;
+    display: block !important;
+}
+
+select option:focus {
+    background-color: #75B044;
+}
+
+.add-location,.add-doctor,.remove-location,.remove-doctor {
+    float: right;
+}
+
+.remove-location,.remove-doctor {
+    margin: 7px 28px 7px 0;
+}
+
+.main-location label {
+    min-width: 80px !important;
+    margin-top: -4px;
+}
+
+.main-location label,#news label,.flash label,.use-doctors label,.doctor-locations label {
+    margin-top: -4px;
+}
+
+.doctor-locations label {
+    max-width: 180px !important;
+}
+
+.clinic-location,.doctor {
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-radius: 18px;
+    margin: 12px 0;
+}
+
+.location-hours label {
+    min-width: 85px !important;
+    margin: 0 0 0 16px;
+}
+
+#topics label {
+    min-width: 180px;
+}
+
+#products * {
+    display: inline-block;
+}
+
+#products label {
+    min-width: 100px;
+}
+
+#products .refractive {
+    display: block;
+}
+
+.hours-note {
+    display: block !important;
+    margin-left: 0 !important;
+}
+
+.open-day {
+    margin: 4px 16px 0 30px !important;
+}
+
+/* -------------------------------------------
+        Input format styles section
+   -------------------------------------------*/
+.form-group {
+    margin: 6px auto;
+    padding: 6px 4px;
+    text-align: left;
+}
+
+.form-group * {
+    vertical-align: top;
+    margin: 0 16px;
+    display: inline-block;
+}
+
+.form-group label {
+    display: inline-block;
+    min-width: 130px;
+}
+
+/* Validation Styles
+  --------------------*/
+.error-status {
+    border-color: #DD0C0C;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(221, 12, 12, 0.6);
+    outline: 0 none;
+}
+
+.success-status {
+    border-color: #0BC20B;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(12, 221, 12, 0.6);
+    outline: 0 none;
+}
+
+.error-msg {
+    display: block;
+    color: #DD0C0C;
+}
+
+/* -------------------------------------------
+        Footer styles section
+   -------------------------------------------*/
+footer {
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 140px;
+    background-color: #E5E5E5;
+    background-color: rgba(218, 218, 218, 0.7);
+}
+
+footer img {
+    margin: 40px auto;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.full-section {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    position: relative;
+    overflow: auto;
+    z-index: 9;
+}
+
+.full-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.vert-half-section {
+    height: 49%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.vert-third-section {
+    height: 32%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.vert-quarter-section {
+    height: 24%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.vert-sixth-section {
+    height: 16%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.horiz-half-section {
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.horiz-third-section {
+    height: 100%;
+    width: 33.3%;
+    display: inline-block;
+}
+
+.horiz-quarter-section {
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+}
+
+.horiz-sixth-section {
+    height: 100%;
+    width: 16.6%;
+    display: inline-block;
+}
+
+#main {
+    position: fixed;
+    z-index: -1;
+    background-image: url('../img/336-joshua-laptop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+#intro {
+    z-index: 99;
+}
+
+#intro h2 {
+    color: #00ccff;    
+}
+
+#profile {
+    z-index: 99;    
+    background-color: #009999;
+}
+
+#profile {
+    display: flex;
+}
+
+#profile p, #profile .content {
+    color: #009999;
+    background-color: #fff;
+}
+
+#profile .content {
+    opacity: 0;
+}
+
+#work {
+    z-index: 99;    
+    background-color: #fff;
+}
+
+#rates {
+    z-index: 99;    
+    background-color: #009999;
+}
+
+#contact {
+    z-index: 99;    
+    background-color: #fff;
+}
+
+#toronto-sky {
+    background-image: url('../img/toronto-parallax/336-toronto-sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -10;
+}
+
+#cn-tower {    
+    background-image: url('../img/toronto-parallax/336-cn-tower.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -8;
+}
+
+#fore-buildings {    
+    background-image: url('../img/toronto-parallax/336-fore-buildings.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -6;
+}
+
+#mid-buildings {    
+    background-image: url('../img/toronto-parallax/336-mid-buildings.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -4;
+}
+
+#boat {    
+    background-image: url('../img/toronto-parallax/336-boat.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    z-index: -2;
+}
+
+#bushes {    
+    background-image: url('../img/toronto-parallax/336-bushes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+}
+
+#toronto-skyline {    
+    background-image: url('../img/toronto-parallax/336-toronto-skyline.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-height: 311px ) {
+    .control {
+        display: block;
+    }
+    .control img {
+        height: 75%;
+        width: auto;
+        max-height: 50px;
+    }
+    .up-arrow {
+        top: 45%;
+        bottom: 55%;
+    }
+    .down-arrow {
+        top: 55%;
+        bottom: 45%;
+    }
+}
+
+@media only screen and (min-height: 350px ) {
+    .control img {
+        height: 90%;
+        width: auto;
+    }
+    .up-arrow {
+        top: 40%;
+        bottom: 60%;
+    }
+    .down-arrow {
+        top: 60%;
+        bottom: 40%;
+    }
+}
+
+@media only screen and (min-height: 411px ) {
+    .control {
+        height: 50px;
+        width: 50px;
+    }
+    .control img {
+        height: 100%;
+        width: auto;
+    }
+    .up-arrow {
+        top: 160px;
+        bottom: 78%;
+    }
+    .down-arrow {
+        top: 78%;
+        bottom: 160px;
+    }
+}
+
+@media only screen and (min-width: 336px){
+    #main {
+        background-image: url('../img/480-joshua-laptop.jpg');
+    }
+    #toronto-sky {
+        background-image: url('../img/toronto-parallax/480-toronto-sky.jpg');
+    }
+    #cn-tower {
+        background-image: url('../img/toronto-parallax/480-cn-tower.png');
+    }
+    #fore-buildings {
+        background-image: url('../img/toronto-parallax/480-fore-buildings.png');
+    }
+    #mid-buildings {
+        background-image: url('../img/toronto-parallax/480-mid-buildings.png');
+    }
+    #boat {
+        background-image: url('../img/toronto-parallax/480-boat.png');
+    }
+    #bushes {
+        background-image: url('../img/toronto-parallax/480-bushes.png');
+    }
+    #toronto-skyline {
+        background-image: url('../img/toronto-parallax/480-toronto-skyline.jpg');
+    }
+}
+
+@media only screen and (min-width: 480px){
+    #main {
+        background-image: url('../img/600-joshua-laptop.jpg');
+    }
+    #toronto-sky {
+        background-image: url('../img/toronto-parallax/600-toronto-sky.jpg');
+    }
+    #cn-tower {
+        background-image: url('../img/toronto-parallax/600-cn-tower.png');
+    }
+    #fore-buildings {
+        background-image: url('../img/toronto-parallax/600-fore-buildings.png');
+    }
+    #mid-buildings {
+        background-image: url('../img/toronto-parallax/600-mid-buildings.png');
+    }
+    #boat {
+        background-image: url('../img/toronto-parallax/600-boat.png');
+    }
+    #bushes {
+        background-image: url('../img/toronto-parallax/600-bushes.png');
+    }
+    #toronto-skyline {
+        background-image: url('../img/toronto-parallax/600-toronto-skyline.jpg');
+    }
+}
+
+@media only screen and (min-width: 600px){
+    #main {
+        background-image: url('../img/768-joshua-laptop.jpg');
+    }
+    #toronto-sky {
+        background-image: url('../img/toronto-parallax/768-toronto-sky.jpg');
+    }
+    #cn-tower {
+        background-image: url('../img/toronto-parallax/768-cn-tower.png');
+    }
+    #fore-buildings {
+        background-image: url('../img/toronto-parallax/768-fore-buildings.png');
+    }
+    #mid-buildings {
+        background-image: url('../img/toronto-parallax/768-mid-buildings.png');
+    }
+    #boat {
+        background-image: url('../img/toronto-parallax/768-boat.png');
+    }
+    #bushes {
+        background-image: url('../img/toronto-parallax/768-bushes.png');
+    }
+    #toronto-skyline {
+        background-image: url('../img/toronto-parallax/768-toronto-skyline.jpg');
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #main {
+        background-image: url('../img/2448-joshua-laptop.jpg');
+    }
+    #toronto-sky {
+        background-image: url('../img/toronto-parallax/2448-toronto-sky.jpg');
+    }
+    #cn-tower {
+        background-image: url('../img/toronto-parallax/2448-cn-tower.png');
+    }
+    #fore-buildings {
+        background-image: url('../img/toronto-parallax/2448-fore-buildings.png');
+    }
+    #mid-buildings {
+        background-image: url('../img/toronto-parallax/2448-mid-buildings.png');
+    }
+    #boat {
+        background-image: url('../img/toronto-parallax/2448-boat.png');
+    }
+    #bushes {
+        background-image: url('../img/toronto-parallax/2448-bushes.png');
+    }
+    #toronto-skyline {
+        background-image: url('../img/toronto-parallax/2448-toronto-skyline.jpg');
+    }
+}
+
+@media only screen and (min-width: 881px ) {
+    .logo {
+        position: relative;
+        display: inline-block;
+    }
+    .mobile {
+        display: none;
+    }
+    .menu {
+        text-align: center;
+        padding: 0;
+        width: 99%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: none
+    }
+    .menu .menu-btn,.menu:active .menu-btn,.menu:hover .menu-btn {
+        display: none
+    }
+
+    .menu a {
+        font-size: 14px
+    }
+    .menu li:not(.menu-btn){
+        display: inline-block;
+        margin: 0;
+    }
+    .menu li a {
+        padding: 4px 9px
+    }
+    .menu .current a {
+        padding: 3px 8px
+    }
+    .menu li:hover a {
+        padding: 3px 8px
+    }
+}
+
+@media only screen and (min-width: 980px ) {
+    .menu a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1109px ) {
+
+}
+
+@media only screen and (min-width: 1377px ) {
+
+}
+
+@media only screen and (min-width: 1654px ) {
+
+}
+
+@media print , ( -o-min-device-pixel-ratio : 5/4) , (
+-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+ * Don't show links for images, or javascript/internal links
+ */
+    a[href^="javascript:"]:after,a[href^="#"]:after {
+        content: "";
+    }
+    pre,blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+    tr,img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,h2,h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,h3 {
+        page-break-after: avoid;
+    }
+}
