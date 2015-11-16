@@ -34,31 +34,33 @@ $(document).ready(function () {
         });
         cur = cur[cur.length - 1];
         var id = cur && cur.length ? cur[0].id : "";
-        var opacity = 0;
-        var bushesPos = 33, boatPos = 40, foreBuildPos = 20, midBuildPos = 13, cnPos = 7;
-        if (fromTop < mainHeight) {
-            opacity = fromTop / mainHeight;
-        }
-        if (fromTop >= mainHeight && fromTop <= mainHeight) {
-            opacity = 1;
-        } 
-        if (fromTop > mainHeight) {
-            opacity = 1 - ((fromTop - mainHeight) / mainHeight);
-        }
-        if (opacity !== lastOpacity) {
-            lastOpacity = opacity;
-            cnPos *= opacity;
-            foreBuildPos *= opacity;
-            midBuildPos *= opacity;
-            boatPos *= opacity;
-            bushesPos *= opacity;
+        if (id === 'intro' || id === 'profile') {
+            var opacity = 0;
+            var bushesPos = 33, boatPos = 40, foreBuildPos = 20, midBuildPos = 13, cnPos = 7;
+            if (fromTop < mainHeight) {
+                opacity = fromTop / mainHeight;
+            }
+            if (fromTop >= mainHeight && fromTop <= mainHeight) {
+                opacity = 1;
+            }
+            if (fromTop > mainHeight) {
+                opacity = 1 - ((fromTop - mainHeight) / mainHeight);
+            }
+            if (opacity !== lastOpacity) {
+                lastOpacity = opacity;
+                cnPos *= opacity;
+                foreBuildPos *= opacity;
+                midBuildPos *= opacity;
+                boatPos *= opacity;
+                bushesPos *= opacity;
 
-            $('#profile').find('.content').css('opacity', opacity);
-            $cnTower.css('left', '-' + cnPos + '%');
-            $foreBuildings.css('left', '-' + foreBuildPos + '%');
-            $midBuildings.css('left', '-' + midBuildPos + '%');
-            $boat.css('left', '-' + boatPos + '%');
-            $bushes.css('left', '-' + bushesPos + '%');
+                $('#profile').find('.content').css('opacity', opacity);
+                $cnTower.css('left', '-' + cnPos + '%');
+                $foreBuildings.css('left', '-' + foreBuildPos + '%');
+                $midBuildings.css('left', '-' + midBuildPos + '%');
+                $boat.css('left', '-' + boatPos + '%');
+                $bushes.css('left', '-' + bushesPos + '%');
+            }
         }
         if (lastId !== id) {
             lastId = id;
