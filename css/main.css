@@ -637,58 +637,11 @@ footer img {
     background-color: #fff;
 }
 
-#toronto-sky {
-    background-image: url('../img/toronto-parallax/336-toronto-sky.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-    z-index: -10;
-}
-
-#cn-tower {    
-    background-image: url('../img/toronto-parallax/336-cn-tower.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-    z-index: -8;
-}
-
-#fore-buildings {    
-    background-image: url('../img/toronto-parallax/336-fore-buildings.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-    z-index: -6;
-}
-
-#mid-buildings {    
-    background-image: url('../img/toronto-parallax/336-mid-buildings.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-    z-index: -4;
-}
-
-#boat {    
-    background-image: url('../img/toronto-parallax/336-boat.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-    z-index: -2;
-}
-
-#bushes {    
-    background-image: url('../img/toronto-parallax/336-bushes.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
-}
-
 #toronto-skyline {    
-    background-image: url('../img/toronto-parallax/336-toronto-skyline.jpg');
+    background-image: url('../img/314-toronto-skyline-night.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom left;
+    background-position: center;
 }
 
 /* ==========================================================================
@@ -753,57 +706,21 @@ footer img {
     }
 }
 
-@media only screen and (min-width: 336px){
+@media only screen and (min-width: 314px){
     #main {
         background-image: url('../img/480-joshua-laptop.jpg');
     }
-    #toronto-sky {
-        background-image: url('../img/toronto-parallax/480-toronto-sky.jpg');
-    }
-    #cn-tower {
-        background-image: url('../img/toronto-parallax/480-cn-tower.png');
-    }
-    #fore-buildings {
-        background-image: url('../img/toronto-parallax/480-fore-buildings.png');
-    }
-    #mid-buildings {
-        background-image: url('../img/toronto-parallax/480-mid-buildings.png');
-    }
-    #boat {
-        background-image: url('../img/toronto-parallax/480-boat.png');
-    }
-    #bushes {
-        background-image: url('../img/toronto-parallax/480-bushes.png');
-    }
     #toronto-skyline {
-        background-image: url('../img/toronto-parallax/480-toronto-skyline.jpg');
+        background-image: url('../img/448-toronto-skyline-night.jpg');
     }
 }
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 448px){
     #main {
         background-image: url('../img/600-joshua-laptop.jpg');
     }
-    #toronto-sky {
-        background-image: url('../img/toronto-parallax/600-toronto-sky.jpg');
-    }
-    #cn-tower {
-        background-image: url('../img/toronto-parallax/600-cn-tower.png');
-    }
-    #fore-buildings {
-        background-image: url('../img/toronto-parallax/600-fore-buildings.png');
-    }
-    #mid-buildings {
-        background-image: url('../img/toronto-parallax/600-mid-buildings.png');
-    }
-    #boat {
-        background-image: url('../img/toronto-parallax/600-boat.png');
-    }
-    #bushes {
-        background-image: url('../img/toronto-parallax/600-bushes.png');
-    }
     #toronto-skyline {
-        background-image: url('../img/toronto-parallax/600-toronto-skyline.jpg');
+        background-image: url('../img/640-toronto-skyline-night.jpg');
     }
 }
 
@@ -811,26 +728,8 @@ footer img {
     #main {
         background-image: url('../img/768-joshua-laptop.jpg');
     }
-    #toronto-sky {
-        background-image: url('../img/toronto-parallax/768-toronto-sky.jpg');
-    }
-    #cn-tower {
-        background-image: url('../img/toronto-parallax/768-cn-tower.png');
-    }
-    #fore-buildings {
-        background-image: url('../img/toronto-parallax/768-fore-buildings.png');
-    }
-    #mid-buildings {
-        background-image: url('../img/toronto-parallax/768-mid-buildings.png');
-    }
-    #boat {
-        background-image: url('../img/toronto-parallax/768-boat.png');
-    }
-    #bushes {
-        background-image: url('../img/toronto-parallax/768-bushes.png');
-    }
     #toronto-skyline {
-        background-image: url('../img/toronto-parallax/768-toronto-skyline.jpg');
+        background-image: url('../img/800-toronto-skyline-night.jpg');
     }
 }
 
@@ -838,26 +737,8 @@ footer img {
     #main {
         background-image: url('../img/2448-joshua-laptop.jpg');
     }
-    #toronto-sky {
-        background-image: url('../img/toronto-parallax/2448-toronto-sky.jpg');
-    }
-    #cn-tower {
-        background-image: url('../img/toronto-parallax/2448-cn-tower.png');
-    }
-    #fore-buildings {
-        background-image: url('../img/toronto-parallax/2448-fore-buildings.png');
-    }
-    #mid-buildings {
-        background-image: url('../img/toronto-parallax/2448-mid-buildings.png');
-    }
-    #boat {
-        background-image: url('../img/toronto-parallax/2448-boat.png');
-    }
-    #bushes {
-        background-image: url('../img/toronto-parallax/2448-bushes.png');
-    }
     #toronto-skyline {
-        background-image: url('../img/toronto-parallax/2448-toronto-skyline.jpg');
+        background-image: url('../img/1024-toronto-skyline-night.jpg');
     }
 }
 
@@ -916,6 +797,12 @@ footer img {
 
 @media only screen and (min-width: 1654px ) {
 
+}
+
+@media only screen and (min-width: 2400px){
+    #toronto-skyline {
+        background-image: url('../img/2400-toronto-skyline-night.jpg');
+    }
 }
 
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
