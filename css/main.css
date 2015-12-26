@@ -67,6 +67,18 @@ textarea {
 }
 
 /* =================================================================================
+   title-switcher styles
+   ================================================================================= */
+
+.hideTitle {
+    display: none;
+}
+
+.displayTitle {
+    display: block;
+}
+
+/* =================================================================================
    Joshua Heagle's custom styles for Joshua Web Strategy
    ================================================================================= */
 
@@ -193,6 +205,11 @@ h1 {
     border-radius: 4px;
     border: 1px solid #00ccff;
     transition: background-color .3s linear;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px 2px #777;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
 .menu li:not(.menu-btn){
@@ -537,28 +554,35 @@ footer img {
 }
 
 .vert-half-section {
-    height: 49%;
+    height: 50%;
     width: 100%;
     display: block;
     clear: both;
 }
 
 .vert-third-section {
-    height: 32%;
+    height: 33.3%;
     width: 100%;
     display: block;
     clear: both;
 }
 
 .vert-quarter-section {
-    height: 24%;
+    height: 25%;
     width: 100%;
     display: block;
     clear: both;
 }
 
 .vert-sixth-section {
-    height: 16%;
+    height: 16.6%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.vert-eighth-section {
+    height: 12.5%;
     width: 100%;
     display: block;
     clear: both;
@@ -588,6 +612,12 @@ footer img {
     display: inline-block;
 }
 
+.horiz-eighth-section {
+    height: 100%;
+    width: 12.5%;
+    display: inline-block;
+}
+
 #main {
     position: fixed;
     z-index: -1;
@@ -603,12 +633,32 @@ footer img {
 
 #intro h2 {
     font-size: 34px;
-    color: #00ccff;    
+    color: #00ccff;
+    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    text-shadow: 0 0 6px #777;
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 #intro h3 {
     font-size: 26px;
-    color: #00ccff;    
+    color: #00ccff;
+    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    text-shadow: 0 0 6px #777;
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+#intro h4 {
+    font-size: 22px;
+    color: #00ccff;
+    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+    text-shadow: 0 0 6px #777;
+    text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 #profile {
@@ -616,8 +666,24 @@ footer img {
     background-color: #fff;
 }
 
-#profile p, #profile .content {
+#profile .content {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.4);
+    min-width: 330px;
+}
+
+#profile p {
+    font-size: 16px;
+    text-align: left;
     color: #fff;
+    -webkit-text-shadow: 0 0 12px rgba(0,0,0,1);
+    -moz-text-shadow: 0 0 12px rgba(0,0,0,1);
+    -o-text-shadow: 0 0 12px rgba(0,0,0,1);
+    text-shadow: 0 0 12px #000;
+    text-shadow: 0 0 12px rgba(0,0,0,1);
+    margin: 0 0 1em;
+    letter-spacing: 1px;
 }
 
 #profile .vert-half-section {
@@ -627,6 +693,18 @@ footer img {
 #work {
     z-index: 99;    
     background-color: #009999;
+}
+
+#work .vert-eighth-section {
+    display: flex;
+}
+
+#work .vert-eighth-section:nth-child(even) div:nth-child(even){
+    background-color: #fff;
+}
+
+#work .vert-eighth-section:nth-child(odd) div:nth-child(odd){
+    background-color: #fff;
 }
 
 #rates {
