@@ -48,7 +48,7 @@ $.fn.typeImitator = function(opts){
         count = 0;
 
     blinkOn = true;
-    var cursorBlink = setInterval('displayCursor()', 600);
+//    var cursorBlink = setInterval('displayCursor()', 600);
     
     if(!isSwitching){
         $typingSurface.empty();
@@ -59,7 +59,7 @@ $.fn.typeImitator = function(opts){
         }
         $typingSurface.show();
         setTimeout(function(){
-            clearInterval(cursorBlink);
+//            clearInterval(cursorBlink);
             $typingSurface.empty();
             $typingSurface.html($typingSurface.html() + '<span style="font-weight: normal">&#124;</span>');
             $.each(settings.text.split(''), function(i, letter){
@@ -73,7 +73,7 @@ $.fn.typeImitator = function(opts){
                     if(i >= settings.text.split('').length - 1) {
                         $typingSurface.html($originalTitle);
                         blinkOn = true;
-                        cursorBlink = setInterval('displayCursor()', 600);
+//                        cursorBlink = setInterval('displayCursor()', 600);
                     }
                 }, settings.textTypeDelay * i);
             });
@@ -82,7 +82,7 @@ $.fn.typeImitator = function(opts){
         // Delay then switch to new title
         setTimeout(function(){
             isSwitching = false;
-            clearInterval(cursorBlink);
+//            clearInterval(cursorBlink);
             $this.switchTitle(settings.isRandom);
         	}, settings.textTypeDelay * settings.text.split('').length * 2 + 2000);
     }
