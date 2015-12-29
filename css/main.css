@@ -553,8 +553,22 @@ footer img {
     z-index: -1;
 }
 
+.vert-three-quarter-section {
+    height: 75%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
 .vert-half-section {
     height: 50%;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+.vert-three-eighth-section {
+    height: 37.5%;
     width: 100%;
     display: block;
     clear: both;
@@ -588,9 +602,21 @@ footer img {
     clear: both;
 }
 
+.horiz-three-quarter-section {
+    height: 100%;
+    width: 75%;
+    display: inline-block;
+}
+
 .horiz-half-section {
     height: 100%;
     width: 50%;
+    display: inline-block;
+}
+
+.horiz-three-eighth-section {
+    height: 100%;
+    width: 37.5%;
     display: inline-block;
 }
 
@@ -695,16 +721,16 @@ footer img {
     background-color: #009999;
 }
 
-#work .vert-eighth-section {
+#work > div, #work .vert-quarter-section {
     display: flex;
 }
 
-#work .vert-eighth-section:nth-child(even) div:nth-child(even){
+#work .project {
+    color: #000;
     background-color: #fff;
-}
-
-#work .vert-eighth-section:nth-child(odd) div:nth-child(odd){
-    background-color: #fff;
+    display: block;
+    min-width: 75px;
+    min-height: 75px
 }
 
 #rates {
