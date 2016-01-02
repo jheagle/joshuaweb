@@ -54,7 +54,7 @@ $.fn.typeImitator = function (opts) {
         $typingSurface.empty();
         $originalTitle = $this.html(); // Save html
         this.$items = this.parent().children();
-        for (var i = 1; i <= this.$items.length; i++) {
+        for (var i = 1; i <= this.$items.length; ++i) {
             this.$items.eq(i).hide();
         }
         $typingSurface.show();
@@ -101,13 +101,13 @@ $.fn.switchTitle = function (isRandom) {
     this.$items = this.parent().children();
 
     if (this.$items.length > 2) {
-        for (var i = 0; i < this.$items.length; i++) {
+        for (var i = 0; i < this.$items.length; ++i) {
             if (this.$items.eq(i).hasClass(typeSurface)) {
                 typeIndex = i;
                 break;
             }
         }
-        for (i = 0; i < this.$items.length; i++) {
+        for (i = 0; i < this.$items.length; ++i) {
             if (i !== typeIndex) {
                 minIndex = i;
                 break;
@@ -117,7 +117,7 @@ $.fn.switchTitle = function (isRandom) {
             index = Math.round(Math.random() * this.$items.length);
         } while (index === typeIndex || index < minIndex || index >= this.$items.length);
 
-        for (var i = minIndex; i < this.$items.length; i++) {
+        for (var i = minIndex; i < this.$items.length; ++i) {
             if (this.$items.eq(i).hasClass(currentTitle)) {
                 this.$items.eq(i).removeClass(currentTitle);
                 if (index === i || !isRandom) {
