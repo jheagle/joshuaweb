@@ -237,7 +237,7 @@ h1 {
 }
 
 .menu:active .menu-btn,.menu:hover .menu-btn {
-    /* margin-left: 0; */
+    margin-left: 0;
 }
 
 .menu li:hover {
@@ -247,7 +247,6 @@ h1 {
 
 .menu li:hover a {
     color: #fff;
-    padding: 9px 15px;
 }
 
 /* -------------------------------------------
@@ -544,6 +543,10 @@ footer img {
     position: relative;
     overflow: hidden;
     z-index: 9;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .full-background {
@@ -551,6 +554,10 @@ footer img {
     width: 100%;
     position: absolute;
     z-index: -1;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;g: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 .vert-three-quarter-section {
@@ -558,6 +565,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-half-section {
@@ -565,6 +576,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-three-eighth-section {
@@ -572,6 +587,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-third-section {
@@ -579,6 +598,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-quarter-section {
@@ -586,6 +609,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-sixth-section {
@@ -593,6 +620,10 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .vert-eighth-section {
@@ -600,48 +631,77 @@ footer img {
     width: 100%;
     display: block;
     clear: both;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-three-quarter-section {
     height: 100%;
     width: 75%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-half-section {
     height: 100%;
     width: 50%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-three-eighth-section {
     height: 100%;
     width: 37.5%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-third-section {
     height: 100%;
     width: 33.3%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-quarter-section {
     height: 100%;
     width: 25%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-sixth-section {
     height: 100%;
     width: 16.6%;
     display: inline-block;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .horiz-eighth-section {
     height: 100%;
     width: 12.5%;
     display: inline-block;
+    -o-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 #main {
@@ -690,6 +750,7 @@ footer img {
 #profile {
     z-index: 99;    
     background-color: #fff;
+    min-height: 475px;
 }
 
 #profile .content {
@@ -878,9 +939,6 @@ footer img {
         padding: 4px 9px
     }
     .menu .current a {
-        padding: 3px 8px
-    }
-    .menu li:hover a {
         padding: 3px 8px
     }
 }
