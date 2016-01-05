@@ -799,9 +799,17 @@ footer img {
     background-color: #fff;
 }
 
+#rates > div {
+    display: flex;
+}
+
 #contact {
     z-index: 99;    
     background-color: #009999;
+}
+
+#contact > div {
+    display: flex;
 }
 
 #toronto-skyline {    
@@ -1019,4 +1027,8 @@ footer img {
     h2,h3 {
         page-break-after: avoid;
     }
+}
+
+@-ms-viewport{
+  width: device-width;
 }
