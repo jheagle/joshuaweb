@@ -794,6 +794,17 @@ footer img {
     min-height: 75px
 }
 
+.logo-link {
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+
+.logo-link img {
+    width: 35%;
+    min-width: 75px;
+}
+
 #rates {
     z-index: 99;    
     background-color: #fff;
