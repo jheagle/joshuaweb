@@ -98,71 +98,24 @@ a {
     text-decoration: none;
 }
 
-.container {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-}
-
-/* -------------------------------------------
-        Page controls styles section
-   -------------------------------------------*/
-.control {
-    position: fixed;
-    right: 4%;
-    height: 100%;
-    width: auto;
-    max-height: 50px;
-    z-index: 999;
-    display: none;
-    transition: all 0.2s linear;
-}
-
-.control img {
-    height: 75%;
-    width: auto;
-    max-height: 50px;
-}
-
-.control:hover,.menu li:hover {
-    opacity: 0.6
-}
-
-.control a {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
-.up-arrow {
-    top: 45%;
-    bottom: 55%;
-}
-
-.down-arrow {
-    top: 55%;
-    bottom: 45%;
-}
-
 /* -------------------------------------------
         Header styles section
    -------------------------------------------*/
 header {
     display: block;
     width: 100%;
-    height: 50px;
+    min-height: 60px;
     position: fixed;
     top: 0;
     z-index: 9999;
     min-width: 256px;
     overflow: auto;
 }
+
+header:hover, header:active {
+    height: 100%;
+}
+
 
 h1 {
     height: 0;
@@ -178,17 +131,17 @@ h1 {
    -------------------------------------------*/
 .menu {
     margin: 0;
-    padding: 4px;
-    text-align: left;
-    width: 96%;
+    padding: 0;
+    text-align: center;
+    width: 100px;
     position: fixed;
-    top: 10px;
-    left: 10px;
-    right: 0;
-    transition: width .4s linear;
+    top: 6px;
+    left: 6px;
+    transition: width .4s cubic-bezier(0.15, 0.72, 1,-0.82) .2s;
 }
 
 .menu .menu-btn {
+    margin: 0;
     display: block;
     width: 75px;
 }
@@ -212,8 +165,28 @@ h1 {
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
-.menu li:not(.menu-btn){
-    display: none;
+.menu li a {
+    display: block;
+    padding: 10px 16px;
+    transition: color 0.4s linear;
+}
+
+.menu li:not(.menu-btn) {
+    width: 100%;
+    height: 0;
+    margin: -1px 0 0;
+    border: 0;
+    font-size: 0em;
+    visibility: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .2s linear;
+}
+
+.menu li:not(.menu-btn) a {
+    padding: 0;
 }
 
 .menu .current {
@@ -221,23 +194,37 @@ h1 {
     background-color: #00ccff;
 }
 
-.menu li a {
-    display: block;
-    padding: 10px 16px;
-    transition: color 0.4s linear;
-}
-
 .menu .current a {
     color: #fff;
     padding: 9px 15px;
 }
 
-.menu:active li,.menu:hover li {
-    display: block;
+.menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
+    height: 40px;
+    margin: 2px;
+    border: 1px solid #00ccff;
+    font-size: 1em;
+    visibility: visible;
+    -webkit-user-select: all;  /* Chrome all / Safari all */
+    -moz-user-select: all;     /* Firefox all */
+    -ms-user-select: all;      /* IE 10+ */
+    user-select: all;
+}
+
+.menu:hover li.current,.menu:active li.current {
+    border: 1px solid #ffffff;
+}
+
+.menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
+    padding: 10px 16px;
 }
 
 .menu:active .menu-btn,.menu:hover .menu-btn {
     margin-left: 0;
+}
+
+.menu:active,.menu:hover {
+	  width: calc(100% - 12px);
 }
 
 .menu li:hover {
@@ -252,204 +239,22 @@ h1 {
 /* -------------------------------------------
         Main Content and Layouts styles section
    -------------------------------------------*/
-.section {
-    height: 100%;
-    width: 100%;
-    margin: 0 0 100px;
-    padding: 70px 0 40px;
-    border-radius: 18px;
-    border-bottom: 4px solid #ccc;
-    position: relative;
-    z-index: 0;
-}
 
-.section:first-child {
-    padding: 130px 0 40px;
-}
-
-.column {
-    display: inline-block;
-}
-
-.column label {
-    min-width: 100px;
-    width: 140px;
-}
-
-.column .form-group {
-    clear: both;
-}
-
-.column .form-group label {
-    margin-top: -5px;
-}
-
-.column .form-group *, .doctor-locations .form-group * {
-    float: right;
-}
 
 /* -------------------------------------------
         Input styles section
    -------------------------------------------*/
-label {
-    color: #00ccff;
-}
 
-input,textarea,select {
-    border: 1px solid #ccc;
-    border-bottom: 3px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #00ccff;
-    font-size: 14px;
-    padding: 6px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s
-        ease-in-out 0s;
-}
-
-input[type='text'],input[type='url'],input[type='tel'],input[type='email'],textarea,select {
-    min-width: 200px;
-}
-
-input[type='time'] {
-    width: 100px;
-    margin: 0 0 10px;
-}
-
-input[type='button'] {
-    border: none;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-    background-color: #75B044;
-    color: #fff;
-    font-weight: 700;
-    padding: 8px 8px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-}
-
-input[type='submit'] {
-    border: none;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-    background-color: #75B044;
-    color: #fff;
-    font-weight: 700;
-    width: 70%;
-    padding: 16px 0;
-}
-
-input:focus,textarea:focus,select:focus {
-    border-color: #66AFE9;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
-        rgba(102, 175, 233, 0.6);
-    outline: 0 none;
-}
-
-select option {
-    color: #75B044;
-    display: block !important;
-}
-
-select option:focus {
-    background-color: #75B044;
-}
-
-.add-location,.add-doctor,.remove-location,.remove-doctor {
-    float: right;
-}
-
-.remove-location,.remove-doctor {
-    margin: 7px 28px 7px 0;
-}
-
-.main-location label {
-    min-width: 80px !important;
-    margin-top: -4px;
-}
-
-.main-location label,#news label,.flash label,.use-doctors label,.doctor-locations label {
-    margin-top: -4px;
-}
-
-.doctor-locations label {
-    max-width: 180px !important;
-}
-
-.clinic-location,.doctor {
-    border: 1px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    border-radius: 18px;
-    margin: 12px 0;
-}
-
-.location-hours label {
-    min-width: 85px !important;
-    margin: 0 0 0 16px;
-}
-
-#topics label {
-    min-width: 180px;
-}
-
-#products * {
-    display: inline-block;
-}
-
-#products label {
-    min-width: 100px;
-}
-
-#products .refractive {
-    display: block;
-}
-
-.hours-note {
-    display: block !important;
-    margin-left: 0 !important;
-}
-
-.open-day {
-    margin: 4px 16px 0 30px !important;
-}
 
 /* -------------------------------------------
         Input format styles section
    -------------------------------------------*/
-.form-group {
-    margin: 6px auto;
-    padding: 6px 4px;
-    text-align: left;
-}
 
-.form-group * {
-    vertical-align: top;
-    margin: 0 16px;
-    display: inline-block;
-}
 
-.form-group label {
-    display: inline-block;
-    min-width: 130px;
-}
-
-/* Validation Styles
+/* -------------------
+ Validation Styles
   --------------------*/
-.error-status {
-    border-color: #DD0C0C;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(221, 12, 12, 0.6);
-    outline: 0 none;
-}
 
-.success-status {
-    border-color: #0BC20B;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(12, 221, 12, 0.6);
-    outline: 0 none;
-}
-
-.error-msg {
-    display: block;
-    color: #DD0C0C;
-}
 
 /* -------------------------------------------
         Footer styles section
@@ -534,6 +339,9 @@ footer img {
     clear: both;
 }
 
+/*----------------------------
+    Grid Styles
+-----------------------------*/
 .full-section {
     text-align: center;
     display: block;
@@ -704,6 +512,10 @@ footer img {
     -o-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+/* ---------------------------------
+    Section Styles
+-----------------------------------*/
+
 #main {
     position: fixed;
     z-index: -1;
@@ -748,7 +560,7 @@ footer img {
 }
 
 #profile {
-    z-index: 99;    
+    z-index: 99;
     background-color: #fff;
     min-height: 475px;
 }
@@ -778,7 +590,7 @@ footer img {
 }
 
 #work {
-    z-index: 99;    
+    z-index: 99;
     background-color: #009999;
 }
 
@@ -806,7 +618,7 @@ footer img {
 }
 
 #rates {
-    z-index: 99;    
+    z-index: 99;
     background-color: #fff;
 }
 
@@ -815,7 +627,7 @@ footer img {
 }
 
 #contact {
-    z-index: 99;    
+    z-index: 99;
     background-color: #009999;
 }
 
@@ -823,7 +635,7 @@ footer img {
     display: flex;
 }
 
-#toronto-skyline {    
+#toronto-skyline {
     background-image: url('../img/314-toronto-skyline-night.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -831,7 +643,7 @@ footer img {
 }
 
 /* ==========================================================================
-   These examples override the primary ('mobile first') styles.
+   These override the primary ('mobile first') styles.
    ========================================================================== */
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
@@ -934,14 +746,20 @@ footer img {
     .mobile {
         display: none;
     }
+    header {
+        min-height: 50px;
+    }
     .menu {
         text-align: center;
         padding: 0;
-        width: 99%;
+        width: 100%;
         position: relative;
         top: 10px;
         left: 0;
         transition: none
+    }
+    .menu:hover, .menu:active {
+        width: 100%;
     }
     .menu .menu-btn,.menu:active .menu-btn,.menu:hover .menu-btn {
         display: none
@@ -950,13 +768,47 @@ footer img {
     .menu a {
         font-size: 14px
     }
-    .menu li:not(.menu-btn){
+
+    .menu li:not(.menu-btn) {
+        width: auto;
+        height: auto;
+        border: 1px solid #00ccff;
+        display: inline-block;
+        margin: 0;
+        visibility: visible;
+        transition: all .6s ease-in-out;
+    }
+
+    .menu li:not(.menu-btn) a {
+        display: block;
+        padding: 4px 9px
+    }
+
+    .menu li.current {
+        border: 1px solid #ffffff;
+    }
+
+    .menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
+        width: auto;
+        height: auto;
+        border: 1px solid #00ccff;
         display: inline-block;
         margin: 0;
     }
-    .menu li a {
+
+    .menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
+        display: block;
         padding: 4px 9px
     }
+
+    .menu:hover li.current,.menu:active li.current {
+        border: 1px solid #ffffff;
+    }
+
+    .menu:hover {
+        width: 100%;
+    }
+
     .menu .current a {
         padding: 3px 8px
     }
