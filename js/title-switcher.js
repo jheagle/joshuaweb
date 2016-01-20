@@ -14,15 +14,17 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
   this.titlesContainer = titlesContainer;
   this.titles = titlesContainer.children();
   this.typeSurface = {};
+  this.isRandom = false;
   this.startTitles = function (isRandom) {
     var typeSurface = 'typeSurface';
-    var currentTitle = this.titlesContainer.find('.' + this.currentClass);
+    //var currentTitle = this.titlesContainer.find('.' + this.currentClass);
+    var currentTitle = this.titles[0];
+    this.isRandom = isRandom || false;
     var $self = this;
     this.titles.eq(0).clone().prependTo(this.titlesContainer).addClass(typeSurface);
     this.typeSurface = this.titlesContainer.find('.' + typeSurface).removeClass(this.currentClass).empty().show();
     this.titles.hide();
-    //$self.typingEffect(currentTitle, switchTitle, this);
-    $self.typingEffect(currentTitle);
+    $self.typingEffect(currentTitle, $self.switchTitle, this);
   };
   this.cursorBlink = function (blinkOn, self) { // display cursor effect
     var $self = self || this;
@@ -33,6 +35,7 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
       $self.typeSurface.text($self.typeSurface.text().replace('|', ''));
     };
   };
+
   this.typingEffect = function (domObject, callBackFunction, self) {
     var $self = self || this;
     var domObject = domObject || $self.titlesContainer.find('.' + $self.currentClass);
@@ -47,22 +50,47 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
         blinkOn = !blinkOn;
       }, i*400);
     }
+
     setTimeout(function () {
       $self.typeSurface.empty();
       $self.typeSurface.html($self.typeSurface.html() + '<span style="font-weight: normal">&#124;</span>');
-      $.each(domObject.text().split(''), function (i, letter) {
+      $.each($(domObject).text().split(''), function (i, letter) {
         setTimeout(function () {
           $self.typeSurface.html($self.typeSurface.text().replace('|', '') + letter + '<span style="font-weight: normal">&#124;</span>');
           // Replace html with old html on last letter
-          if (domObject.text() + '|' === $self.typeSurface.text()) {
-            $self.typeSurface.html(domObject.html() + '<span style="font-weight: normal">&#124;</span>');
-            setTimeout(function () {
-              callBackFunction(domObject, callBackFunction, $self);
-            }, 200 * domObject.text().split('').length * 2);
+          if ($(domObject).text() + '|' === $self.typeSurface.text()) {
+            $self.typeSurface.html($(domObject).html() + '<span style="font-weight: normal">&#124;</span>');
+            for (var j = 0; j < numBlinks; ++j){
+              setTimeout(function () {
+                --j;
+                $self.cursorBlink(blinkOn, $self);
+                blinkOn = !blinkOn;
+                if(j === 0){
+                    callBackFunction(domObject, callBackFunction, $self);
+                }
+              }, j*400);
+            }
           }
-        }, i*200);
+        }, i*300);
       });
     }, numBlinks*400);
+  };
+
+  this.switchTitle = function(currentTitle, callBackFunction, self) {
+    var $self = self || this;
+    var currentIndex = 0;
+    var maxIndex = $self.titles.length;
+    $.each($self.titles, function(i, title){
+      if (title === currentTitle){
+        $(title).removeClass($self.currentClass);
+        return currentIndex = i+1 < maxIndex? i+1: 0;
+      }
+    });
+    //$.inArray(currentTitle, $self.titles);
+    var nextTitle = $self.titles[currentIndex];
+    $(currentTitle).removeClass($self.currentClass);
+    $(nextTitle).addClass($self.currentClass);
+    $self.typingEffect(nextTitle, callBackFunction, $self);
   };
 }
 $('.' + currentClass).each(function(i, titleClass){
