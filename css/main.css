@@ -1,823 +1,821 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+* What follows is the result of much research on cross-browser styling.
+* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+* Kroc Camen, and the H5BP dev community and team.
+*/
 
 /* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+Base styles: opinionated defaults
+========================================================================== */
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
+* Remove text-shadow in selection highlight: h5bp.com/i
+* These selection rule sets have to be separate.
+* Customize the background color to match your design.
+*/
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
- * A better looking default horizontal rule
- */
+* A better looking default horizontal rule
+*/
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
+* Remove the gap between images, videos, audio and canvas and the bottom of
+* their containers: h5bp.com/i/440
+*/
 audio,canvas,img,svg,video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
- * Remove default fieldset styles.
- */
+* Remove default fieldset styles.
+*/
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+* Allow only vertical resizing of textareas.
+*/
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* =================================================================================
-   title-switcher styles
-   ================================================================================= */
+title-switcher styles
+================================================================================= */
 
 .hideTitle {
-    display: none;
+  display: none;
 }
 
 .displayTitle {
-    display: block;
+  display: block;
 }
 
 /* =================================================================================
-   Joshua Heagle's custom styles for Joshua Web Strategy
-   ================================================================================= */
+Joshua Heagle's custom styles for Joshua Web Strategy
+================================================================================= */
 
 /* -------------------------------------------
-        General styles section
-   -------------------------------------------*/
+General styles section
+-------------------------------------------*/
 html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
 a {
-    outline: none;
-    text-decoration: none;
+  outline: none;
+  text-decoration: none;
 }
 
 /* -------------------------------------------
-        Header styles section
-   -------------------------------------------*/
+Header styles section
+-------------------------------------------*/
 header {
-    display: block;
-    width: 100%;
-    min-height: 60px;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    min-width: 256px;
-    overflow: auto;
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  min-width: 256px;
+  overflow: auto;
 }
 
 header:hover, header:active {
-    height: 100%;
+  height: 100%;
 }
 
 
 h1 {
-    height: 0;
-    position: relative;
-    top: 0;
-    left: -999999px;
-    margin: 0;
-    padding: 0;
+  height: 0;
+  position: relative;
+  top: 0;
+  left: -999999px;
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------------------------------
-        Menu styles section
-   -------------------------------------------*/
+Menu styles section
+-------------------------------------------*/
 .menu {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 100px;
-    position: fixed;
-    top: 6px;
-    left: 6px;
-    transition: width .4s cubic-bezier(0.15, 0.72, 1,-0.82) .2s;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  transition: width .4s cubic-bezier(0.15, 0.72, 1,-0.82) .2s;
 }
 
 .menu .menu-btn {
-    margin: 0;
-    display: block;
-    width: 75px;
+  margin: 0;
+  display: block;
+  width: 75px;
 }
 
 .menu a {
-    color: #00ccff;
-    font-size: 16px;
+  color: #00ccff;
+  font-size: 16px;
 }
 
 .menu li {
-    list-style: none;
-    margin: 2px;
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #00ccff;
-    transition: background-color .3s linear;
-    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 6px 2px #777;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #00ccff;
+  transition: background-color .3s linear;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px 2px #777;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
 .menu li a {
-    display: block;
-    padding: 10px 16px;
-    transition: color 0.4s linear;
+  display: block;
+  padding: 10px 16px;
+  transition: color 0.4s linear;
 }
 
 .menu li:not(.menu-btn) {
-    width: 100%;
-    height: 0;
-    margin: -1px 0 0;
-    border: 0;
-    font-size: 0em;
-    visibility: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: all .2s linear;
+  width: 100%;
+  height: 0;
+  margin: -1px 0 0;
+  border: 0;
+  font-size: 0em;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .2s linear;
 }
 
 .menu li:not(.menu-btn) a {
-    padding: 0;
+  padding: 0;
 }
 
 .menu .current {
-    border: 1px solid #fff;
-    background-color: #00ccff;
+  border: 1px solid #fff;
+  background-color: #00ccff;
 }
 
 .menu .current a {
-    color: #fff;
-    padding: 9px 15px;
+  color: #fff;
+  padding: 9px 15px;
 }
 
 .menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
-    height: 40px;
-    margin: 2px;
-    border: 1px solid #00ccff;
-    font-size: 1em;
-    visibility: visible;
-    -webkit-user-select: all;  /* Chrome all / Safari all */
-    -moz-user-select: all;     /* Firefox all */
-    -ms-user-select: all;      /* IE 10+ */
-    user-select: all;
+  height: 40px;
+  margin: 2px;
+  border: 1px solid #00ccff;
+  font-size: 1em;
+  visibility: visible;
+  -webkit-user-select: all;  /* Chrome all / Safari all */
+  -moz-user-select: all;     /* Firefox all */
+  -ms-user-select: all;      /* IE 10+ */
+  user-select: all;
 }
 
 .menu:hover li.current,.menu:active li.current {
-    border: 1px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
-    padding: 10px 16px;
+  padding: 10px 16px;
 }
 
 .menu:active .menu-btn,.menu:hover .menu-btn {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .menu:active,.menu:hover {
-	  width: calc(100% - 12px);
+  width: calc(100% - 12px);
 }
 
 .menu li:hover {
-    border: 1px solid #fff;
-    background-color: #00ccff;
+  border: 1px solid #fff;
+  background-color: #00ccff;
 }
 
 .menu li:hover a {
-    color: #fff;
+  color: #fff;
 }
 
 /* -------------------------------------------
-        Main Content and Layouts styles section
-   -------------------------------------------*/
+Main Content and Layouts styles section
+-------------------------------------------*/
 
 
 /* -------------------------------------------
-        Input styles section
-   -------------------------------------------*/
+Input styles section
+-------------------------------------------*/
 
 
 /* -------------------------------------------
-        Input format styles section
-   -------------------------------------------*/
+Input format styles section
+-------------------------------------------*/
 
 
 /* -------------------
- Validation Styles
-  --------------------*/
+Validation Styles
+--------------------*/
 
 
 /* -------------------------------------------
-        Footer styles section
-   -------------------------------------------*/
+Footer styles section
+-------------------------------------------*/
 footer {
-    display: block;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    height: 140px;
-    background-color: #E5E5E5;
-    background-color: rgba(218, 218, 218, 0.7);
+  display: block;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  height: 140px;
+  background-color: #E5E5E5;
+  background-color: rgba(218, 218, 218, 0.7);
 }
 
 footer img {
-    margin: 40px auto;
+  margin: 40px auto;
 }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 /*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 /*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
 .visuallyhidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
 .visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /*
- * Hide visually and from screenreaders, but maintain layout
- */
+* Hide visually and from screenreaders, but maintain layout
+*/
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
 .clearfix:before,.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*----------------------------
-    Grid Styles
+Grid Styles
 -----------------------------*/
 .full-section {
-    text-align: center;
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    position: relative;
-    overflow: hidden;
-    z-index: 9;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .full-background {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;g: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;g: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 .vert-three-quarter-section {
-    height: 75%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 75%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-half-section {
-    height: 50%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 50%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-three-eighth-section {
-    height: 37.5%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 37.5%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-third-section {
-    height: 33.3%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 33.3%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-quarter-section {
-    height: 25%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 25%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-sixth-section {
-    height: 16.6%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 16.6%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vert-eighth-section {
-    height: 12.5%;
-    width: 100%;
-    display: block;
-    clear: both;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 12.5%;
+  width: 100%;
+  display: block;
+  clear: both;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-three-quarter-section {
-    height: 100%;
-    width: 75%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 75%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-half-section {
-    height: 100%;
-    width: 50%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-three-eighth-section {
-    height: 100%;
-    width: 37.5%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 37.5%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-third-section {
-    height: 100%;
-    width: 33.3%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 33.3%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-quarter-section {
-    height: 100%;
-    width: 25%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-sixth-section {
-    height: 100%;
-    width: 16.6%;
-    display: inline-block;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  height: 100%;
+  width: 16.6%;
+  display: inline-block;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .horiz-eighth-section {
-    height: 100%;
-    width: 12.5%;
-    display: inline-block;
-    -o-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  height: 100%;
+  width: 12.5%;
+  display: inline-block;
+  -o-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 /* ---------------------------------
-    Section Styles
+Section Styles
 -----------------------------------*/
 
 #main {
-    position: fixed;
-    z-index: -1;
-    background-image: url('../img/336-joshua-laptop.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+  position: fixed;
+  z-index: -1;
+  background-image: url('../img/336-joshua-laptop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
 
 #intro {
-    z-index: 99;
+  z-index: 99;
 }
 
 #intro h2 {
-    font-size: 34px;
-    color: #00ccff;
-    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    text-shadow: 0 0 6px #777;
-    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  font-size: 34px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 #intro h3 {
-    font-size: 26px;
-    color: #00ccff;
-    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    text-shadow: 0 0 6px #777;
-    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  font-size: 26px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 #intro h4 {
-    font-size: 22px;
-    color: #00ccff;
-    -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
-    text-shadow: 0 0 6px #777;
-    text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  font-size: 22px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 #profile {
-    z-index: 99;
-    background-color: #fff;
-    min-height: 475px;
+  z-index: 99;
+  background-color: #fff;
+  min-height: 475px;
 }
 
 #profile .content {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(0,0,0,0.4);
-    min-width: 330px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.4);
+  min-width: 330px;
 }
 
 #profile p {
-    font-size: 16px;
-    text-align: left;
-    color: #fff;
-    -webkit-text-shadow: 0 0 12px rgba(0,0,0,1);
-    -moz-text-shadow: 0 0 12px rgba(0,0,0,1);
-    -o-text-shadow: 0 0 12px rgba(0,0,0,1);
-    text-shadow: 0 0 12px #000;
-    text-shadow: 0 0 12px rgba(0,0,0,1);
-    margin: 0 0 1em;
-    letter-spacing: 1px;
+  font-size: 16px;
+  text-align: left;
+  color: #fff;
+  -webkit-text-shadow: 0 0 12px rgba(0,0,0,1);
+  -moz-text-shadow: 0 0 12px rgba(0,0,0,1);
+  -o-text-shadow: 0 0 12px rgba(0,0,0,1);
+  text-shadow: 0 0 12px #000;
+  text-shadow: 0 0 12px rgba(0,0,0,1);
+  margin: 0 0 1em;
+  letter-spacing: 1px;
 }
 
 #profile .vert-half-section {
-    display: flex;
+  display: flex;
 }
 
 #work {
-    z-index: 99;
-    background-color: #009999;
+  z-index: 99;
+  background-color: #009999;
 }
 
 #work > div, #work .vert-quarter-section {
-    display: flex;
+  display: flex;
 }
 
 #work .project {
-    color: #000;
-    background-color: #fff;
-    display: block;
-    min-width: 75px;
-    min-height: 75px
+  color: #000;
+  background-color: #fff;
+  display: block;
+  min-width: 75px;
+  min-height: 75px;
+  padding: 4px;
+}
+
+#work .project h4 {
+  padding: 0;
+  margin: 0 4px 4px;
 }
 
 .logo-link {
-    float: left;
-    width: 100%;
-    text-align: left;
+  float: left;
+  width: 100%;
+  text-align: left;
 }
 
 .logo-link img {
-    width: 35%;
-    min-width: 75px;
+  width: 35%;
+  min-width: 75px;
+}
+.title-switcher p {
+  text-align: left;
+  margin: 0;
 }
 
 #rates {
-    z-index: 99;
-    background-color: #fff;
+  z-index: 99;
+  background-color: #fff;
 }
 
 #rates > div {
-    display: flex;
+  display: flex;
 }
 
 #contact {
-    z-index: 99;
-    background-color: #009999;
+  z-index: 99;
+  background-color: #009999;
 }
 
 #contact > div {
-    display: flex;
+  display: flex;
 }
 
 #toronto-skyline {
-    background-image: url('../img/314-toronto-skyline-night.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  background-image: url('../img/314-toronto-skyline-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* ==========================================================================
-   These override the primary ('mobile first') styles.
-   ========================================================================== */
+These override the primary ('mobile first') styles.
+========================================================================== */
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media only screen and (min-height: 311px ) {
-    .control {
-        display: block;
-    }
-    .control img {
-        height: 75%;
-        width: auto;
-        max-height: 50px;
-    }
-    .up-arrow {
-        top: 45%;
-        bottom: 55%;
-    }
-    .down-arrow {
-        top: 55%;
-        bottom: 45%;
-    }
 }
 
 @media only screen and (min-height: 350px ) {
-    .control img {
-        height: 90%;
-        width: auto;
-    }
-    .up-arrow {
-        top: 40%;
-        bottom: 60%;
-    }
-    .down-arrow {
-        top: 60%;
-        bottom: 40%;
-    }
 }
 
 @media only screen and (min-height: 411px ) {
-    .control {
-        height: 50px;
-        width: 50px;
-    }
-    .control img {
-        height: 100%;
-        width: auto;
-    }
-    .up-arrow {
-        top: 160px;
-        bottom: 78%;
-    }
-    .down-arrow {
-        top: 78%;
-        bottom: 160px;
-    }
 }
 
 @media only screen and (min-width: 314px){
-    #main {
-        background-image: url('../img/480-joshua-laptop.jpg');
-    }
-    #toronto-skyline {
-        background-image: url('../img/448-toronto-skyline-night.jpg');
-    }
+  #main {
+    background-image: url('../img/480-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../img/448-toronto-skyline-night.jpg');
+  }
 }
 
 @media only screen and (min-width: 448px){
-    #main {
-        background-image: url('../img/600-joshua-laptop.jpg');
-    }
-    #toronto-skyline {
-        background-image: url('../img/640-toronto-skyline-night.jpg');
-    }
+  #main {
+    background-image: url('../img/600-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../img/640-toronto-skyline-night.jpg');
+  }
 }
 
 @media only screen and (min-width: 600px){
-    #main {
-        background-image: url('../img/768-joshua-laptop.jpg');
-    }
-    #toronto-skyline {
-        background-image: url('../img/800-toronto-skyline-night.jpg');
-    }
+  #main {
+    background-image: url('../img/768-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../img/800-toronto-skyline-night.jpg');
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .mobile-half-left-section {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    right: 50%;
+  }
+
+  .mobile-half-right-section {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    right: 0;
+  }
+
+  .mobile-whole-section {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-top {
+    top: 0;
+  }
+
+  #work .mobile-half-left-section, #work .mobile-half-right-section, #work .mobile-whole-section {
+    height: 20%;
+  }
 }
 
 @media only screen and (min-width: 768px){
-    #main {
-        background-image: url('../img/2448-joshua-laptop.jpg');
-    }
-    #toronto-skyline {
-        background-image: url('../img/1024-toronto-skyline-night.jpg');
-    }
+  #main {
+    background-image: url('../img/2448-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../img/1024-toronto-skyline-night.jpg');
+  }
 }
 
 @media only screen and (min-width: 881px ) {
-    .logo {
-        position: relative;
-        display: inline-block;
-    }
-    .mobile {
-        display: none;
-    }
-    header {
-        min-height: 50px;
-    }
-    .menu {
-        text-align: center;
-        padding: 0;
-        width: 100%;
-        position: relative;
-        top: 10px;
-        left: 0;
-        transition: none
-    }
-    .menu:hover, .menu:active {
-        width: 100%;
-    }
-    .menu .menu-btn,.menu:active .menu-btn,.menu:hover .menu-btn {
-        display: none
-    }
+  .logo {
+    position: relative;
+    display: inline-block;
+  }
+  .mobile {
+    display: none;
+  }
+  header {
+    min-height: 50px;
+  }
+  .menu {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    top: 10px;
+    left: 0;
+    transition: none
+  }
+  .menu:hover, .menu:active {
+    width: 100%;
+  }
+  .menu .menu-btn,.menu:active .menu-btn,.menu:hover .menu-btn {
+    display: none
+  }
 
-    .menu a {
-        font-size: 14px
-    }
+  .menu a {
+    font-size: 14px
+  }
 
-    .menu li:not(.menu-btn) {
-        width: auto;
-        height: auto;
-        border: 1px solid #00ccff;
-        display: inline-block;
-        margin: 0;
-        visibility: visible;
-        transition: all .6s ease-in-out;
-    }
+  .menu li:not(.menu-btn) {
+    width: auto;
+    height: auto;
+    border: 1px solid #00ccff;
+    display: inline-block;
+    margin: 0;
+    visibility: visible;
+    transition: all .6s ease-in-out;
+  }
 
-    .menu li:not(.menu-btn) a {
-        display: block;
-        padding: 4px 9px
-    }
+  .menu li:not(.menu-btn) a {
+    display: block;
+    padding: 4px 9px
+  }
 
-    .menu li.current {
-        border: 1px solid #ffffff;
-    }
+  .menu li.current {
+    border: 1px solid #ffffff;
+  }
 
-    .menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
-        width: auto;
-        height: auto;
-        border: 1px solid #00ccff;
-        display: inline-block;
-        margin: 0;
-    }
+  .menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
+    width: auto;
+    height: auto;
+    border: 1px solid #00ccff;
+    display: inline-block;
+    margin: 0;
+  }
 
-    .menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
-        display: block;
-        padding: 4px 9px
-    }
+  .menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
+    display: block;
+    padding: 4px 9px
+  }
 
-    .menu:hover li.current,.menu:active li.current {
-        border: 1px solid #ffffff;
-    }
+  .menu:hover li.current,.menu:active li.current {
+    border: 1px solid #ffffff;
+  }
 
-    .menu:hover {
-        width: 100%;
-    }
+  .menu:hover {
+    width: 100%;
+  }
 
-    .menu .current a {
-        padding: 3px 8px
-    }
+  .menu .current a {
+    padding: 3px 8px
+  }
 }
 
 @media only screen and (min-width: 980px ) {
-    .menu a {
-        font-size: 16px;
-    }
+  .menu a {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 1109px ) {
@@ -833,65 +831,65 @@ footer img {
 }
 
 @media only screen and (min-width: 2400px){
-    #toronto-skyline {
-        background-image: url('../img/2400-toronto-skyline-night.jpg');
-    }
+  #toronto-skyline {
+    background-image: url('../img/2400-toronto-skyline-night.jpg');
+  }
 }
 
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
--webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+  -webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
     /* Style adjustments for high resolution devices */
-}
+  }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-@media print {
+  /* ==========================================================================
+  Print styles.
+  Inlined to avoid required HTTP connection: h5bp.com/r
+  ========================================================================== */
+  @media print {
     * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster: h5bp.com/s */
+      box-shadow: none !important;
+      text-shadow: none !important;
     }
     a,a:visited {
-        text-decoration: underline;
+      text-decoration: underline;
     }
     a[href]:after {
-        content: " (" attr(href) ")";
+      content: " (" attr(href) ")";
     }
     abbr[title]:after {
-        content: " (" attr(title) ")";
+      content: " (" attr(title) ")";
     }
 
     /*
- * Don't show links for images, or javascript/internal links
- */
+    * Don't show links for images, or javascript/internal links
+    */
     a[href^="javascript:"]:after,a[href^="#"]:after {
-        content: "";
+      content: "";
     }
     pre,blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
+      border: 1px solid #999;
+      page-break-inside: avoid;
     }
     thead {
-        display: table-header-group; /* h5bp.com/t */
+      display: table-header-group; /* h5bp.com/t */
     }
     tr,img {
-        page-break-inside: avoid;
+      page-break-inside: avoid;
     }
     img {
-        max-width: 100% !important;
+      max-width: 100% !important;
     }
     p,h2,h3 {
-        orphans: 3;
-        widows: 3;
+      orphans: 3;
+      widows: 3;
     }
     h2,h3 {
-        page-break-after: avoid;
+      page-break-after: avoid;
     }
-}
+  }
 
-@-ms-viewport{
-  width: device-width;
-}
+  @-ms-viewport{
+    width: device-width;
+  }

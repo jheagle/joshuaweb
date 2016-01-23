@@ -15,10 +15,15 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
   this.titles = titlesContainer.children();
   this.typeSurface = {};
   this.isRandom = false;
-  this.startTitles = function (isRandom) {
+  this.delaySwitch = 400;
+  this.delayEffect = 200;
+
+  this.startTitles = function (isRandom, delaySwitch, delayEffect) {
     var typeSurface = 'typeSurface';
     var currentIndex = this.titlesContainer.find('.' + this.currentClass).index();
     var currentTitle = this.titles[currentIndex];
+    this.delaySwitch = delaySwitch || 400;
+    this.delayEffect = delayEffect || 200;
     this.isRandom = isRandom || false;
     var $self = this;
     this.titles.eq(0).clone().prependTo(this.titlesContainer).addClass(typeSurface);
@@ -26,41 +31,49 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
     this.titles.hide();
     $self.switchTitle(currentTitle, $self.typingEffect, this);
   };
+
   this.cursorBlink = function (blinkOn, self) { // display cursor effect
     var $self = self || this;
     if (blinkOn){
-      $self.typeSurface.text($self.typeSurface.text().replace('|', ''));
-      $self.typeSurface.html($self.typeSurface.text() + '<span style="font-weight: normal">&#124;</span>');
+      $self.typeSurface.html($self.typeSurface.html().replace('|', ''));
+      $self.typeSurface.html($self.typeSurface.html() + '<span style="font-weight: normal; color: black; text-decoration: none">&#124;</span>');
     }else{
-      $self.typeSurface.text($self.typeSurface.text().replace('|', ''));
+      $self.typeSurface.html($self.typeSurface.html().replace('|', ''));
     };
   };
 
   this.typingEffect = function (domObject, callBackFunction, self) {
     var $self = self || this;
-    var domObject = domObject || $self.titlesContainer.find('.' + $self.currentClass);
+    var currentIndex = $self.titlesContainer.find('.' + $self.currentClass).index();
+    var domObject = domObject || $self.titles[currentIndex+1];
     var callBackFunction = callBackFunction || $self.typingEffect;
     var blinkOn = true;
-    var numBlinks = 5;
-    $self.typeSurface.empty();
+    var numBlinks = 4;
+    if ($self.typeSurface.attr('style')){
+      $self.typeSurface.removeAttr('style');
+    }
+    if ($(domObject).attr('style')){
+      $self.typeSurface.attr('style', $(domObject).attr('style'));
+    }
+    $self.typeSurface.empty().show();
 
     for (var i = 0; i < numBlinks; ++i){
       setTimeout(function () {
         $self.cursorBlink(blinkOn, $self);
         blinkOn = !blinkOn;
-      }, i*400);
+      }, i*$self.delaySwitch);
     }
 
     setTimeout(function () {
       $self.typeSurface.empty();
-      $self.typeSurface.html($self.typeSurface.html() + '<span style="font-weight: normal">&#124;</span>');
+      $self.typeSurface.html($self.typeSurface.html() + '<span style="font-weight: normal; color: black; text-decoration: none">&#124;</span>');
       $.each($(domObject).text().split(''), function (i, letter) {
         setTimeout(function () {
-          $self.typeSurface.html($self.typeSurface.text().replace('|', '') + letter + '<span style="font-weight: normal">&#124;</span>');
+          $self.typeSurface.html($self.typeSurface.text().replace('|', '') + letter + '<span style="font-weight: normal; color: black; text-decoration: none">&#124;</span>');
           // Replace html with old html on last letter
           if ($(domObject).text() + '|' === $self.typeSurface.text()) {
-            $self.typeSurface.html($(domObject).html() + '<span style="font-weight: normal">&#124;</span>');
-            for (var j = 0; j < numBlinks; ++j){
+            $self.typeSurface.html(domObject.innerHTML + '<span style="font-weight: normal; color: black; text-decoration: none">&#124;</span>');
+            for (var j = 0; j < numBlinks*2; ++j){
               setTimeout(function () {
                 --j;
                 $self.cursorBlink(blinkOn, $self);
@@ -68,12 +81,12 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
                 if(j === 0){
                   callBackFunction(domObject, $self.typingEffect, $self);
                 }
-              }, j*400);
+              }, j*$self.delaySwitch);
             }
           }
-        }, i*300);
+        }, i*$self.delayEffect);
       });
-    }, numBlinks*400);
+    }, numBlinks*$self.delaySwitch);
   };
 
   this.switchTitle = function(currentTitle, callBackFunction, self) {
@@ -82,7 +95,7 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
     var maxIndex = $self.titles.length;
     var nextIndex = 0;
     if (maxIndex === 1){
-      callBackFunction(currentTitle, $self.switchTitle, $self);
+      return callBackFunction(currentTitle, $self.switchTitle, $self);
     }
     if ($self.isRandom){
       if (!$.trim($self.typeSurface.text())){
@@ -100,13 +113,18 @@ var TitleSwitcher = function (currentClass, titlesContainer) {
     var nextTitle = $self.titles[nextIndex];
     $(currentTitle).removeClass($self.currentClass);
     $(nextTitle).addClass($self.currentClass);
-    callBackFunction(nextTitle, $self.switchTitle, $self);
+    return callBackFunction(nextTitle, $self.switchTitle, $self);
   };
 }
+
 $('.' + currentClass).each(function(i, titleClass){
   var title = new TitleSwitcher(currentClass, $(titleClass).parent());
   titles.push(title);
 });
 $.each(titles, function(i, title){
-  title.startTitles(true);
+  if (title.titlesContainer.hasClass('title-switcher')){
+    title.startTitles(false, 400, 100);
+  }else{
+    title.startTitles(true);
+  }
 });
