@@ -1,0 +1,19 @@
+global-includes:
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    js/main.js: {}
+    js/plugins.js: {}
+  dependencies:
+    - core/normalize
+
+home-includes:
+  css:
+    theme:
+      css/home.css: {}
+  js:
+    js/home.js: {}
+    js/title-switcher.min.js: {}
+  dependencies:
+    - core/jquery
