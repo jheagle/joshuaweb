@@ -1,0 +1,535 @@
+/* =================================================================================
+title-switcher styles
+================================================================================= */
+
+.hideTitle {
+  display: none;
+}
+
+.displayTitle {
+  display: block;
+}
+
+/* =================================================================================
+Joshua Heagle's custom styles for Joshua Web Strategy
+================================================================================= */
+
+/* -------------------------------------------
+General styles section
+-------------------------------------------*/
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* -------------------------------------------
+Header styles section
+-------------------------------------------*/
+header {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  min-width: 256px;
+  overflow: auto;
+}
+
+header:hover, header:active {
+  height: 100%;
+}
+
+
+h1 {
+  height: 0;
+  position: relative;
+  top: 0;
+  left: -999999px;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------
+Menu styles section
+-------------------------------------------*/
+.menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  transition: width .4s cubic-bezier(0.15, 0.72, 1,-0.82) .2s;
+}
+
+.menu .menu-btn {
+  margin: 0;
+  display: block;
+  width: 75px;
+}
+
+.menu a {
+  color: #00ccff;
+  font-size: 16px;
+}
+
+.menu li {
+  list-style: none;
+  margin: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #00ccff;
+  transition: background-color .3s linear;
+  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 6px 2px #777;
+  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 16px;
+  transition: color 0.4s linear;
+}
+
+.menu li:not(.menu-btn) {
+  width: 100%;
+  height: 0;
+  margin: -1px 0 0;
+  border: 0;
+  font-size: 0em;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .2s linear;
+}
+
+.menu li:not(.menu-btn) a {
+  padding: 0;
+}
+
+.menu .current {
+  border: 1px solid #fff;
+  background-color: #00ccff;
+}
+
+.menu .current a {
+  color: #fff;
+  padding: 9px 15px;
+}
+
+.menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
+  height: 40px;
+  margin: 2px;
+  border: 1px solid #00ccff;
+  font-size: 1em;
+  visibility: visible;
+  -webkit-user-select: all;  /* Chrome all / Safari all */
+  -moz-user-select: all;     /* Firefox all */
+  -ms-user-select: all;      /* IE 10+ */
+  user-select: all;
+}
+
+.menu:hover li.current,.menu:active li.current {
+  border: 1px solid #ffffff;
+}
+
+.menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
+  padding: 10px 16px;
+}
+
+.menu:active .menu-btn,.menu:hover .menu-btn {
+  margin-left: 0;
+}
+
+.menu:active,.menu:hover {
+  width: calc(100% - 12px);
+}
+
+.menu li:hover {
+  border: 1px solid #fff;
+  background-color: #00ccff;
+}
+
+.menu li:hover a {
+  color: #fff;
+}
+
+/* -------------------------------------------
+Main Content and Layouts styles section
+-------------------------------------------*/
+
+
+/* -------------------------------------------
+Input styles section
+-------------------------------------------*/
+
+
+/* -------------------------------------------
+Input format styles section
+-------------------------------------------*/
+
+
+/* -------------------
+Validation Styles
+--------------------*/
+
+
+/* -------------------------------------------
+Footer styles section
+-------------------------------------------*/
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  height: 140px;
+  background-color: #E5E5E5;
+  background-color: rgba(218, 218, 218, 0.7);
+}
+
+footer img {
+  margin: 40px auto;
+}
+
+/* ---------------------------------
+Section Styles
+-----------------------------------*/
+
+#main {
+  position: fixed;
+  z-index: -1;
+  background-image: url('../images/336-joshua-laptop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+#intro {
+  z-index: 99;
+}
+
+#intro h2 {
+  font-size: 34px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+#intro h3 {
+  font-size: 26px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+#intro h4 {
+  font-size: 22px;
+  color: #00ccff;
+  -webkit-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -moz-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  -o-text-shadow: 0 0 6px rgba(0,0,0,0.4);
+  text-shadow: 0 0 6px #777;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+#profile {
+  z-index: 99;
+  background-color: #fff;
+  min-height: 475px;
+}
+
+#profile .content {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.4);
+  min-width: 330px;
+}
+
+#profile p {
+  font-size: 16px;
+  text-align: left;
+  color: #fff;
+  -webkit-text-shadow: 0 0 12px rgba(0,0,0,1);
+  -moz-text-shadow: 0 0 12px rgba(0,0,0,1);
+  -o-text-shadow: 0 0 12px rgba(0,0,0,1);
+  text-shadow: 0 0 12px #000;
+  text-shadow: 0 0 12px rgba(0,0,0,1);
+  margin: 0 0 1em;
+  letter-spacing: 1px;
+}
+
+#profile .vert-half-section {
+  display: flex;
+}
+
+#work {
+  z-index: 99;
+  background-color: #009999;
+}
+
+#work > div, #work .vert-quarter-section {
+  display: flex;
+}
+
+#work .project {
+  color: #000;
+  background-color: #fff;
+  display: block;
+  min-width: 75px;
+  min-height: 75px;
+  padding: 4px;
+}
+
+#work .project h4 {
+  padding: 0;
+  margin: 0 4px 4px;
+}
+
+.logo-link {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+.logo-link img {
+  width: 35%;
+  min-width: 75px;
+}
+.title-switcher p {
+  text-align: left;
+  margin: 0;
+}
+
+#rates {
+  z-index: 99;
+  background-color: #fff;
+}
+
+#rates > div {
+  display: flex;
+}
+
+#contact {
+  z-index: 99;
+  background-color: #009999;
+}
+
+#contact > div {
+  display: flex;
+}
+
+#toronto-skyline {
+  background-image: url('../images/314-toronto-skyline-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ==========================================================================
+These override the primary ('mobile first') styles.
+========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-height: 311px ) {
+}
+
+@media only screen and (min-height: 350px ) {
+}
+
+@media only screen and (min-height: 411px ) {
+}
+
+@media only screen and (min-width: 314px){
+  #main {
+    background-image: url('../images/480-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../images/448-toronto-skyline-night.jpg');
+  }
+}
+
+@media only screen and (min-width: 448px){
+  #main {
+    background-image: url('../images/600-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../images/640-toronto-skyline-night.jpg');
+  }
+}
+
+@media only screen and (min-width: 600px){
+  #main {
+    background-image: url('../images/768-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../images/800-toronto-skyline-night.jpg');
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .mobile-half-left-section {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    right: 50%;
+  }
+
+  .mobile-half-right-section {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    right: 0;
+  }
+
+  .mobile-whole-section {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-top {
+    top: 0;
+  }
+
+  #work .mobile-half-left-section, #work .mobile-half-right-section, #work .mobile-whole-section {
+    height: 20%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  #main {
+    background-image: url('../images/2448-joshua-laptop.jpg');
+  }
+  #toronto-skyline {
+    background-image: url('../images/1024-toronto-skyline-night.jpg');
+  }
+}
+
+@media only screen and (min-width: 881px ) {
+  .logo {
+    position: relative;
+    display: inline-block;
+  }
+  .mobile {
+    display: none;
+  }
+  header {
+    min-height: 50px;
+  }
+  .menu {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    top: 10px;
+    left: 0;
+    transition: none
+  }
+  .menu:hover, .menu:active {
+    width: 100%;
+  }
+  .menu .menu-btn,.menu:active .menu-btn,.menu:hover .menu-btn {
+    display: none
+  }
+
+  .menu a {
+    font-size: 14px
+  }
+
+  .menu li:not(.menu-btn) {
+    width: auto;
+    height: auto;
+    border: 1px solid #00ccff;
+    display: inline-block;
+    margin: 0;
+    visibility: visible;
+    transition: all .6s ease-in-out;
+  }
+
+  .menu li:not(.menu-btn) a {
+    display: block;
+    padding: 4px 9px
+  }
+
+  .menu li.current {
+    border: 1px solid #ffffff;
+  }
+
+  .menu:hover li:not(.menu-btn),.menu:active li:not(.menu-btn) {
+    width: auto;
+    height: auto;
+    border: 1px solid #00ccff;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .menu:hover li:not(.menu-btn) a,.menu:active li:not(.menu-btn) a {
+    display: block;
+    padding: 4px 9px
+  }
+
+  .menu:hover li.current,.menu:active li.current {
+    border: 1px solid #ffffff;
+  }
+
+  .menu:hover {
+    width: 100%;
+  }
+
+  .menu .current a {
+    padding: 3px 8px
+  }
+}
+
+@media only screen and (min-width: 980px ) {
+  .menu a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1109px ) {
+
+}
+
+@media only screen and (min-width: 1377px ) {
+
+}
+
+@media only screen and (min-width: 1654px ) {
+
+}
+
+@media only screen and (min-width: 2400px){
+  #toronto-skyline {
+    background-image: url('../images/2400-toronto-skyline-night.jpg');
+  }
+}
+
+@media print , ( -o-min-device-pixel-ratio : 5/4) , (
+  -webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
