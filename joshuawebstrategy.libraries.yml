@@ -2,6 +2,9 @@ global-includes:
   css:
     theme:
       css/main.css: {}
+      css/grid.css: {}
+      css/grid-medium.css: {}
+      css/grid-large.css: {}
   js:
     js/main.js: {}
     js/plugins.js: {}

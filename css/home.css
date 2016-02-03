@@ -218,6 +218,8 @@ Section Styles
   background-position: top center;
 }
 
+#
+
 #intro {
   z-index: 99;
 }
@@ -278,17 +280,9 @@ Section Styles
   letter-spacing: 1px;
 }
 
-#profile .vert-half-section {
-  display: flex;
-}
-
 #work {
   z-index: 99;
   background-color: #009999;
-}
-
-#work > div, #work .vert-quarter-section {
-  display: flex;
 }
 
 #work .project {
@@ -325,17 +319,9 @@ Section Styles
   background-color: #fff;
 }
 
-#rates > div {
-  display: flex;
-}
-
 #contact {
   z-index: 99;
   background-color: #009999;
-}
-
-#contact > div {
-  display: flex;
 }
 
 #toronto-skyline {
