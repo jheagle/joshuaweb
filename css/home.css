@@ -381,6 +381,9 @@ Section Styles
   z-index: 99;
   background-color: #fff;
 }
+#rates .service {
+  background-color: #009999;
+}
 #contact {
   z-index: 99;
   background-color: #009999;
@@ -525,6 +528,9 @@ These override the primary ('mobile first') styles.
   }
   .menu .current a {
     padding: 3px 8px
+  }
+  .title-switcher p {
+    font-size: 14px;
   }
   #work .project {
     border: none;

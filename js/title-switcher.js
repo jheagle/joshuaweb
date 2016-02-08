@@ -36,10 +36,10 @@
     this.cursorBlink = function(blinkOn, self) { // display cursor effect
       var $self = self || this;
       if (blinkOn) {
-        $self.typeSurface.html($.trim($self.typeSurface.html().replace('/^(.*)*\||&nbsp;$/', '')));
-        $self.typeSurface.html($self.typeSurface.html() + '<span style="font-weight: normal; color: black; text-decoration: none">&#124;</span>');
+        $self.typeSurface.html($.trim($self.typeSurface.html().replace(/\||&nbsp;*(\<\/span\>)?$/, '$1')));
+        $self.typeSurface.html($self.typeSurface.html() + '<span style="display: inline-block;font-weight: normal; color: black; text-decoration: none">&#124;</span>');
       } else {
-        $self.typeSurface.html($self.typeSurface.html().replace('|', '&nbsp;'));
+        $self.typeSurface.html($self.typeSurface.html().replace(/\|(\<\/span\>)$/, '&nbsp;$1'));
       };
     };
 
