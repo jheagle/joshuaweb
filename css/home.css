@@ -5,9 +5,11 @@ title-switcher styles
 .hideTitle {
   display: none;
 }
+
 .displayTitle {
   display: block;
 }
+
 
 /* =================================================================================
 Joshua Heagle's custom styles for Joshua Web Strategy
@@ -25,10 +27,12 @@ html, body {
   padding: 0;
   position: absolute;
 }
+
 a {
   outline: none;
   text-decoration: none;
 }
+
 
 /* -------------------------------------------
 Header styles section
@@ -44,9 +48,11 @@ header {
   min-width: 256px;
   overflow: auto;
 }
+
 header:hover, header:active {
   height: 100%;
 }
+
 h1 {
   height: 0;
   position: relative;
@@ -55,6 +61,7 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
 
 /* -------------------------------------------
 Menu styles section
@@ -70,15 +77,18 @@ Menu styles section
   left: 6px;
   transition: width .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
+
 .menu .menu-btn {
   margin: 0;
   display: block;
   width: 75px;
 }
+
 .menu a {
   color: #00ccff;
   font-size: 16px;
 }
+
 .menu li {
   list-style: none;
   margin: 2px;
@@ -92,11 +102,13 @@ Menu styles section
   box-shadow: 0px 0px 6px 2px #777;
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
 }
+
 .menu li a {
   display: block;
   padding: 10px 16px;
   transition: color 0.4s linear;
 }
+
 .menu li:not(.menu-btn) {
   width: 100%;
   height: 0;
@@ -110,17 +122,21 @@ Menu styles section
   user-select: none;
   transition: all .2s linear;
 }
+
 .menu li:not(.menu-btn) a {
   padding: 0;
 }
+
 .menu .current {
   border: 1px solid #fff;
   background-color: #00ccff;
 }
+
 .menu .current a {
   color: #fff;
   padding: 9px 15px;
 }
+
 .menu:hover li:not(.menu-btn), .menu:active li:not(.menu-btn) {
   height: 40px;
   margin: 2px;
@@ -135,25 +151,32 @@ Menu styles section
   /* IE 10+ */
   user-select: all;
 }
+
 .menu:hover li.current, .menu:active li.current {
   border: 1px solid #ffffff;
 }
+
 .menu:hover li:not(.menu-btn) a, .menu:active li:not(.menu-btn) a {
   padding: 10px 16px;
 }
+
 .menu:active .menu-btn, .menu:hover .menu-btn {
   margin-left: 0;
 }
+
 .menu:active, .menu:hover {
   width: calc(100% - 12px);
 }
+
 .menu li:hover {
   border: 1px solid #fff;
   background-color: #00ccff;
 }
+
 .menu li:hover a {
   color: #fff;
 }
+
 
 /* -------------------------------------------
 Main Content and Layouts styles section
@@ -188,9 +211,11 @@ footer {
   background-color: #E5E5E5;
   background-color: rgba(218, 218, 218, 0.7);
 }
+
 footer img {
   margin: 40px auto;
 }
+
 
 /* ---------------------------------
 Section Styles
@@ -204,9 +229,11 @@ Section Styles
   background-size: cover;
   background-position: top center;
 }
+
 # #intro {
   z-index: 99;
 }
+
 #intro h2 {
   font-size: 34px;
   color: #00ccff;
@@ -216,6 +243,7 @@ Section Styles
   text-shadow: 0 0 6px #777;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
+
 #intro h3 {
   font-size: 26px;
   color: #00ccff;
@@ -225,6 +253,7 @@ Section Styles
   text-shadow: 0 0 6px #777;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
+
 #intro h4 {
   font-size: 22px;
   color: #00ccff;
@@ -234,17 +263,20 @@ Section Styles
   text-shadow: 0 0 6px #777;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
+
 #profile {
   z-index: 99;
   background-color: #fff;
   min-height: 475px;
 }
+
 #profile .content {
   border-radius: 10px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.4);
   min-width: 330px;
 }
+
 #profile p {
   font-size: 16px;
   text-align: left;
@@ -257,36 +289,42 @@ Section Styles
   margin: 0 0 1em;
   letter-spacing: 1px;
 }
+
 #work {
   z-index: 99;
   background-color: #009999;
   padding: 4px;
 }
+
 #work .project {
   color: #000;
   background-color: #fff;
-  display: block;
   min-width: 75px;
   min-height: 75px;
   padding: 4px;
   border: 4px solid #009999;
 }
+
 #work .project h4 {
   padding: 0;
   margin: 0 4px 4px;
 }
+
 .logo-link {
   margin: 8px;
   width: 100%;
   text-align: left;
 }
+
 .logo-link img {
   width: 35%;
   min-width: 75px;
 }
+
 #eyeconx .logo-link, #eyestartv .logo-link, #bright-optical .logo-link {
   display: none;
 }
+
 .title-switcher p, .titles h4 {
   text-shadow: 0 0 6px #777;
   -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
@@ -294,16 +332,19 @@ Section Styles
   -o-text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
+
 .title-switcher p {
   text-align: left;
   margin: 0;
   font-size: 22px;
 }
+
 #work iframe {
   width: 0;
   height: 0;
   position: absolute;
 }
+
 #addressbook {
   position: relative;
   background-image: url(../images/live-street-cams.jpg);
@@ -311,6 +352,7 @@ Section Styles
   background-position: center;
   background-size: cover;
 }
+
 #eyeconx {
   position: relative;
   background-image: url(../images/eyeconx-website.jpg);
@@ -318,6 +360,7 @@ Section Styles
   background-position: top center;
   background-size: cover;
 }
+
 #live-cam {
   position: relative;
   background-image: url(../images/live-street-cams.jpg);
@@ -325,6 +368,7 @@ Section Styles
   background-position: center;
   background-size: cover;
 }
+
 #title-switcher-plugin {
   position: relative;
   background-image: url(../images/title-switcher-plugin.jpg);
@@ -332,6 +376,7 @@ Section Styles
   background-position: center;
   background-size: cover;
 }
+
 .blue-shade {
   display: block;
   width: 100%;
@@ -344,6 +389,7 @@ Section Styles
   bottom: 0;
   z-index: 1;
 }
+
 #cam-title {
   color: #FFC017;
   font-size: 14px;
@@ -356,6 +402,7 @@ Section Styles
   left: 0;
   margin-top: -26px;
 }
+
 #json-search {
   position: relative;
   background-image: url(../images/live-street-cams.jpg);
@@ -363,6 +410,7 @@ Section Styles
   background-position: center;
   background-size: cover;
 }
+
 #eyestartv {
   position: relative;
   background-image: url(../images/eyestartv-register.jpg);
@@ -370,6 +418,7 @@ Section Styles
   background-position: top center;
   background-size: cover;
 }
+
 #bright-optical {
   position: relative;
   background-image: url(../images/bright-optical-location-admin.jpg);
@@ -377,23 +426,30 @@ Section Styles
   background-position: top center;
   background-size: cover;
 }
+
 #rates {
   z-index: 99;
   background-color: #fff;
 }
+
 #rates .service {
+  color: #000;
   background-color: #009999;
+  border: 4px solid #fff;
 }
+
 #contact {
   z-index: 99;
   background-color: #009999;
 }
+
 #toronto-skyline {
   background-image: url('../images/314-toronto-skyline-night.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 
 /* ==========================================================================
 These override the primary ('mobile first') styles.
@@ -402,9 +458,13 @@ These override the primary ('mobile first') styles.
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+
 @media only screen and (min-height: 311px) {}
+
 @media only screen and (min-height: 350px) {}
+
 @media only screen and (min-height: 411px) {}
+
 @media only screen and (min-width: 314px) {
   #main {
     background-image: url('../images/480-joshua-laptop.jpg');
@@ -413,6 +473,7 @@ These override the primary ('mobile first') styles.
     background-image: url('../images/448-toronto-skyline-night.jpg');
   }
 }
+
 @media only screen and (min-width: 448px) {
   #main {
     background-image: url('../images/600-joshua-laptop.jpg');
@@ -421,6 +482,7 @@ These override the primary ('mobile first') styles.
     background-image: url('../images/640-toronto-skyline-night.jpg');
   }
 }
+
 @media only screen and (min-width: 600px) {
   #main {
     background-image: url('../images/768-joshua-laptop.jpg');
@@ -429,6 +491,7 @@ These override the primary ('mobile first') styles.
     background-image: url('../images/800-toronto-skyline-night.jpg');
   }
 }
+
 @media only screen and (max-width: 768px) {
   .mobile-half-left-section {
     width: 50%;
@@ -456,6 +519,7 @@ These override the primary ('mobile first') styles.
     height: 20%;
   }
 }
+
 @media only screen and (min-width: 768px) {
   #main {
     background-image: url('../images/2448-joshua-laptop.jpg');
@@ -464,6 +528,7 @@ These override the primary ('mobile first') styles.
     background-image: url('../images/1024-toronto-skyline-night.jpg');
   }
 }
+
 @media only screen and (min-width: 881px) {
   .logo {
     position: relative;
@@ -532,7 +597,7 @@ These override the primary ('mobile first') styles.
   .title-switcher p {
     font-size: 14px;
   }
-  #work .project {
+  #work .project, #rates .service {
     border: none;
   }
   .logo-link {
@@ -543,19 +608,25 @@ These override the primary ('mobile first') styles.
     height: 150%;
   }
 }
+
 @media only screen and (min-width: 980px) {
   .menu a {
     font-size: 16px;
   }
 }
+
 @media only screen and (min-width: 1109px) {}
+
 @media only screen and (min-width: 1377px) {}
+
 @media only screen and (min-width: 1654px) {}
+
 @media only screen and (min-width: 2400px) {
   #toronto-skyline {
     background-image: url('../images/2400-toronto-skyline-night.jpg');
   }
 }
+
 @media print, ( -o-min-device-pixel-ratio: 5/4), ( -webkit-min-device-pixel-ratio: 1.25), ( min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }

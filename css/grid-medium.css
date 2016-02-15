@@ -1,11 +1,11 @@
-@media only screen and (min-width: 881px) {
+@media only screen and (min-width: 580px) {
   /*----------------------------
 Grid Styles
 -----------------------------*/
   /**
 - vertical styles
 */
-  .vert-one-elevnth {
+  /*.vert-one-elevnth {
     height: 9.09%;
   }
   .vert-full {
@@ -139,11 +139,11 @@ Grid Styles
   }
   .vert-six-elevnth {
     height: 54.54%;
-  }
+  }*/
   /**
 - horizontal styles
 */
-  .horiz-one-elevnth {
+  /*.horiz-one-elevnth {
     width: 9.09%;
   }
   .horiz-full {
@@ -277,13 +277,10 @@ Grid Styles
   }
   .horiz-six-elevnth {
     width: 54.54%;
-  }
+  }*/
   .vert-row > .sml, .vert-row > .lrg, .horiz-column > .sml, .horiz-column > .lrg, .vert-row.sml, .vert-row.lrg, .horiz-column.sml, .horiz-column.lrg {
     display: none;
     *zoom: 0;
-  }
-  .vert-row.med, .vert-row.med, .horiz-column.med, .horiz-column.med {
-    display: flex;
   }
   .vert-row > .med, .vert-row > .med {
     display: inline-block;
@@ -291,5 +288,8 @@ Grid Styles
   }
   .horiz-column > .med, .horiz-column > .med {
     display: block;
+  }
+  .vert-row.med, .vert-row.med, .horiz-column.med, .horiz-column.med {
+    display: flex;
   }
 }

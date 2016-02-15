@@ -284,12 +284,9 @@ Grid Styles
   .horiz-one-twelfth {
     width: 8.3%;
   }
-  .vert-row > .sml, .vert-row > .med, .horiz-column > .sml, .horiz-column > .med,  .vert-row.sml, .vert-row.med, .horiz-column.sml, .horiz-column.med {
+  .vert-row > .sml, .vert-row > .med, .horiz-column > .sml, .horiz-column > .med, .vert-row.sml, .vert-row.med, .horiz-column.sml, .horiz-column.med {
     display: none;
     *zoom: 0;
-  }
-  .vert-row.lrg, .vert-row.lrg, .horiz-column.lrg, .horiz-column.lrg {
-    display: flex;
   }
   .vert-row > .lrg, .vert-row > .lrg {
     display: inline-block;
@@ -297,5 +294,8 @@ Grid Styles
   }
   .horiz-column > .lrg, .horiz-column > .lrg {
     display: block;
+  }
+  .vert-row.lrg, .vert-row.lrg, .horiz-column.lrg, .horiz-column.lrg {
+    display: flex;
   }
 }
