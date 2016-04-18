@@ -11,8 +11,13 @@
     var href = $(this).attr("href"),
       offset = href === "#" ? 0 : $(href).offset().top + 1;
     $('html, body').stop().animate({
-      scrollTop: offset
-    }, 550);
+        scrollTop: offset
+      },
+      550,
+      function() {
+        if (location.hash !== href)
+          window.location.hash = href;
+      });
     menuItems.parent().removeClass("current");
     $(this).parent().addClass("current");
     e.preventDefault();
