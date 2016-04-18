@@ -5,63 +5,53 @@ title-switcher styles
 .hideTitle {
   display: none;
 }
-
 .displayTitle {
   display: block;
 }
-
 
 /* =================================================================================
 Joshua Heagle's custom styles for Joshua Web Strategy
 ================================================================================= */
 
-
-/* -------------------------------------------
-General styles section
--------------------------------------------*/
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: absolute;
+.double-underline {
+  border-bottom: 6px double #00ccff;
 }
-
-a {
-  outline: none;
-  text-decoration: none;
-}
-
-
-/* -------------------------------------------
-Header styles section
--------------------------------------------*/
-
-header {
-  display: block;
-  width: 100%;
-  min-height: 60px;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-  min-width: 256px;
-  overflow: auto;
-}
-
-header:hover, header:active {
-  height: 100%;
-}
-
-h1 {
+.arrow-up {
+  width: 0;
   height: 0;
-  position: relative;
-  top: 0;
-  left: -999999px;
-  margin: 0;
-  padding: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 1em solid #00ccff;
+  margin: -0.2em 0 0.2em;
+  display: inline-block;
 }
-
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #00ccff;
+  margin: 0.2em 0 -0.2em;
+  display: inline-block;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #00ccff;
+  margin: 0 -0.2em 0 0.2em;
+  display: inline-block;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-right: 1em solid #00ccff;
+  margin: 0 0.2em 0 -0.2em;
+  display: inline-block;
+}
 
 /* -------------------------------------------
 Menu styles section
@@ -77,18 +67,15 @@ Menu styles section
   left: 6px;
   transition: width .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
-
 .menu .menu-btn {
   margin: 0;
   display: block;
   width: 75px;
 }
-
 .menu a {
   color: #00ccff;
-  font-size: 16px;
+  font-size: 1.4rem;
 }
-
 .menu li {
   list-style: none;
   margin: 2px;
@@ -96,25 +83,22 @@ Menu styles section
   border-radius: 4px;
   border: 1px solid #00ccff;
   transition: background-color .3s linear;
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 6px 2px #777;
-  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
-
 .menu li a {
   display: block;
   padding: 10px 16px;
   transition: color 0.4s linear;
 }
-
 .menu li:not(.menu-btn) {
   width: 100%;
   height: 0;
   margin: -1px 0 0;
   border: 0;
-  font-size: 0em;
+  font-size: 0rem;
   visibility: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -122,26 +106,22 @@ Menu styles section
   user-select: none;
   transition: all .2s linear;
 }
-
 .menu li:not(.menu-btn) a {
   padding: 0;
 }
-
 .menu .current {
   border: 1px solid #fff;
   background-color: #00ccff;
 }
-
 .menu .current a {
   color: #fff;
   padding: 9px 15px;
 }
-
 .menu:hover li:not(.menu-btn), .menu:active li:not(.menu-btn) {
   height: 40px;
   margin: 2px;
   border: 1px solid #00ccff;
-  font-size: 1em;
+  font-size: 1rem;
   visibility: visible;
   -webkit-user-select: all;
   /* Chrome all / Safari all */
@@ -151,71 +131,25 @@ Menu styles section
   /* IE 10+ */
   user-select: all;
 }
-
 .menu:hover li.current, .menu:active li.current {
   border: 1px solid #ffffff;
 }
-
 .menu:hover li:not(.menu-btn) a, .menu:active li:not(.menu-btn) a {
   padding: 10px 16px;
 }
-
 .menu:active .menu-btn, .menu:hover .menu-btn {
   margin-left: 0;
 }
-
 .menu:active, .menu:hover {
   width: calc(100% - 12px);
 }
-
 .menu li:hover {
   border: 1px solid #fff;
   background-color: #00ccff;
 }
-
 .menu li:hover a {
   color: #fff;
 }
-
-
-/* -------------------------------------------
-Main Content and Layouts styles section
--------------------------------------------*/
-
-
-/* -------------------------------------------
-Input styles section
--------------------------------------------*/
-
-
-/* -------------------------------------------
-Input format styles section
--------------------------------------------*/
-
-
-/* -------------------
-Validation Styles
---------------------*/
-
-
-/* -------------------------------------------
-Footer styles section
--------------------------------------------*/
-
-footer {
-  display: block;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  height: 140px;
-  background-color: #E5E5E5;
-  background-color: rgba(218, 218, 218, 0.7);
-}
-
-footer img {
-  margin: 40px auto;
-}
-
 
 /* ---------------------------------
 Section Styles
@@ -229,102 +163,96 @@ Section Styles
   background-size: cover;
   background-position: top center;
 }
-
-# #intro {
-  z-index: 99;
-}
-
-#intro h2 {
-  font-size: 34px;
-  color: #00ccff;
-  -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -o-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 6px #777;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-}
-
-#intro h3 {
-  font-size: 26px;
-  color: #00ccff;
-  -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -o-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 6px #777;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-}
-
-#intro h4 {
-  font-size: 22px;
-  color: #00ccff;
-  -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  -o-text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 6px #777;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
-}
-
-#profile {
-  z-index: 99;
-  background-color: #fff;
-  min-height: 475px;
-}
-
-#profile .content {
-  border-radius: 10px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
-  min-width: 330px;
-}
-
-#profile p {
-  font-size: 16px;
-  text-align: left;
+#main h1 {
+  position: absolute;
+  left: -200%;
+  top: -200%;
+  height: 0;
+  width: 0;
   color: #fff;
-  -webkit-text-shadow: 0 0 12px rgba(0, 0, 0, 1);
-  -moz-text-shadow: 0 0 12px rgba(0, 0, 0, 1);
-  -o-text-shadow: 0 0 12px rgba(0, 0, 0, 1);
-  text-shadow: 0 0 12px #000;
-  text-shadow: 0 0 12px rgba(0, 0, 0, 1);
+  font-size: .1rem;
+}
+#intro {
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 -45px 100px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 -45px 100px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: inset 0 -45px 100px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 -45px 100px rgba(0, 0, 0, 0.4);
+}
+#intro h2, #intro h3, #intro h4 {
+  -webkit-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  -moz-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  -o-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+#profile {
+  min-height: 550px;
+}
+#toronto-skyline {
+  background-image: url('../images/314-toronto-skyline-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#profile .content {
+  padding: 70px 10px 10px;
+  background-color: rgba(0, 153, 153, 0.4);
+  border: none;
+}
+#profile p {
+  text-align: left;
   margin: 0 0 1em;
-  letter-spacing: 1px;
+  padding: 0 20px;
 }
-
+#profile a {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+#profile .contact-button {
+  margin: 30px 20px 0;
+  display: block;
+  font-size: 1.6rem;
+  transition: all 0.2s ease-in-all;
+  width: calc(100% - 40px);
+  padding: 20px 10px;
+  border-radius: .4rem;
+  background-color: rgba(255, 255, 255, 1);
+}
+#profile .contact-button:hover, #profile .contact-button:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 #work {
-  z-index: 99;
-  background-color: #009999;
-  padding: 4px;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
 }
-
-#work .project {
-  color: #000;
-  background-color: #fff;
-  min-width: 75px;
-  min-height: 75px;
-  padding: 4px;
-  border: 4px solid #009999;
+#work .content {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  font-weight: 700;
+  font-size: 1.4em;
 }
-
-#work .project h4 {
-  padding: 0;
+#work .content h4 {
   margin: 0 4px 4px;
 }
-
 .logo-link {
   margin: 8px;
   width: 100%;
   text-align: left;
 }
-
 .logo-link img {
   width: 35%;
   min-width: 75px;
 }
-
 #eyeconx .logo-link, #eyestartv .logo-link, #bright-optical .logo-link {
   display: none;
 }
-
 .title-switcher p, .titles h4 {
   text-shadow: 0 0 6px #777;
   -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
@@ -332,51 +260,58 @@ Section Styles
   -o-text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
-
 .title-switcher p {
   text-align: left;
   margin: 0;
-  font-size: 22px;
+  font-size: 1.8rem;
 }
-
+.title-switcher a {
+  font-size: 1.8rem;
+}
 #work iframe {
   width: 0;
   height: 0;
   position: absolute;
 }
-
-#addressbook {
-  position: relative;
-  background-image: url(../images/live-street-cams.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#work .social-overlay {
+  position:absolute;
+  bottom: 0;
+  z-index: 10;
 }
-
-#eyeconx {
+#work .social-links {
+  color: #fff;
+}
+#work .social-overlay p{
+  color: #444;
+  background-color: rgba(0, 153, 153, 0.7);
+}
+#addressbook, #eyeconx, #live-cam, #title-switcher-plugin, #json-search, #eyestartv, #bright-optical {
   position: relative;
-  background-image: url(../images/eyeconx-website.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
-
+#addressbook {
+  background-image: url(../images/address-book.jpg);
+}
+#eyeconx {
+  background-image: url(../images/eyeconx-website.jpg);
+}
 #live-cam {
-  position: relative;
   background-image: url(../images/live-street-cams.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
-
 #title-switcher-plugin {
-  position: relative;
   background-image: url(../images/title-switcher-plugin.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
-
+#json-search {
+  background-image: url(../images/json-keyword-search.jpg);
+}
+#eyestartv {
+  background-image: url(../images/eyestartv-register.jpg);
+}
+#bright-optical {
+  background-image: url(../images/bright-optical-location-admin.jpg);
+}
 .blue-shade {
   display: block;
   width: 100%;
@@ -389,81 +324,186 @@ Section Styles
   bottom: 0;
   z-index: 1;
 }
-
 #cam-title {
   color: #FFC017;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: 'Arial', arial, helvetica, san-serif;
-  font-weight: 700;
   position: absolute;
   top: 100%;
   right: 0;
   bottom: 0;
   left: 0;
   margin-top: -26px;
+  text-decoration: none;
 }
-
-#json-search {
-  position: relative;
-  background-image: url(../images/live-street-cams.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-#eyestartv {
-  position: relative;
-  background-image: url(../images/eyestartv-register.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
-
-#bright-optical {
-  position: relative;
-  background-image: url(../images/bright-optical-location-admin.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
-
 #rates {
-  z-index: 99;
+  min-height: 1540px;
+}
+#rates .content {}
+#rates .rate-intro p {
+  text-align: left;
+  margin: 0 0 0 30%;
+}
+#rates .rate-column {
+  text-align: left;
+  padding: 1rem;
+}
+#rates .rate-column li {
+  margin-bottom: 1.2rem;
+}
+#rates .rate-column > p {
+  margin-top: 1.2rem;
+}
+#rates .sml .rate-column {
+  min-height: 620px;
+}
+#rates .sml .rate-column:nth-of-type(2) {
+  min-height: 420px;
+}
+#rates .sml .rate-column:first-of-type {
+  min-height: 320px;
+}
+#rates .sml .rate-column h4, #rates .sml .rate-column h5, #rates .sml .rate-column h6, #rates .sml .rate-column p {
+  display: inline-block;
+  margin: 4px 20px 0 0;
+  font-size: 1.4rem
+}
+#rates .sml .rate-column h6, #rates .sml .rate-column p {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  vertical-align: top;
+}
+#rates .sml .rate-column h6 {
+  width: 29%;
+  min-width: 66px;
+}
+#rates .sml .rate-column p {
+  width: 70%;
+}
+#rates .sml .rate-column ul {
+  padding-left: 0;
+  list-style: none;
+}
+#contact {
+  min-height: 450px;
+}
+#contact .content {
+  padding: 0;
+}
+#contact .content > .contact-note {
+  padding: 20px 5px 5px;
+}
+#contact .content > .contact-note p {
+  padding: 0 8px;
+  text-align: left;
+}
+#contact .lrg .content > .contact-note {
+  padding: 60px 5px 5px;
+}
+#contact .company-contact {
+  padding: 0 8px;
+}
+#contact h3, #contact h4, #contact a {
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+}
+#contact a:hover, #contact a:focus {
+  opacity: .6;
+}
+#contact .sml .company-contact {
+  text-align: right;
+  font-size: 1.4rem;
+}
+#contact .lrg .company-contact {
+  font-size: 1.6rem;
+}
+#contact .company-contact h4 {
+  font-size: 1.6rem;
+}
+#contact .contact-note h3 {
+  font-size: 2rem;
+}
+#contact form {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#contact .contact-info {
+  width: 100%;
+  height: 30%;
+  text-align: left;
+}
+#contact .contact-info .form-group {
+  width: 100%;
+  text-align: center;
+}
+#contact input, #contact textarea {
+  width: 90%;
+  position: relative;
+  margin: 0;
+  font-size: .8rem;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+#contact input:not(.large-button):hover, #contact textarea:hover, #contact input:not(.large-button):focus, #contact textarea:focus {
+  font-size: 1.2rem;
+  width: 95%;
+}
+#contact .message {
+  width: 100%;
+  height: 65%;
+}
+#contact .message textarea {
+  height: 90%;
+}
+#contact .message textarea:hover, #contact .message textarea:focus {
+  height: 92%;
+}
+#contact .large-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  font-size: 2.6rem;
+}
+#contact .large-button:hover, #contact .large-button:focus {
+  width: 104%;
+  height: 121%;
+  font-size: 2.8rem;
+  margin: -1% -2% 0;
+  border: none;
+  -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+#home-footer {
+  z-index: 1;
   background-color: #fff;
 }
-
-#rates .service {
-  color: #000;
+#home-footer .copyright {
+  color: #fff;
   background-color: #009999;
   border: 4px solid #fff;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
-
-#contact {
-  z-index: 99;
-  background-color: #009999;
+#home-footer .copyright .copyright-info {}
+#home-footer .copyright .copyright-info p {
+  padding: 6px 4px;
+  font-size: 1.8rem;
+  margin: 0;
 }
-
-#toronto-skyline {
-  background-image: url('../images/314-toronto-skyline-night.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 
 /* ==========================================================================
 These override the primary ('mobile first') styles.
 ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (min-height: 311px) {}
-
-@media only screen and (min-height: 350px) {}
-
-@media only screen and (min-height: 411px) {}
 
 @media only screen and (min-width: 314px) {
   #main {
@@ -472,8 +512,27 @@ These override the primary ('mobile first') styles.
   #toronto-skyline {
     background-image: url('../images/448-toronto-skyline-night.jpg');
   }
+  #contact .company-contact {
+    padding: 0 30px;
+  }
+  #rates .rate-intro p {
+    margin: 0 30px 0 30%;
+  }
 }
-
+@media only screen and (min-width: 344px) {
+  #rates {
+    min-height: 1140px;
+  }
+  #rates .sml .rate-column {
+    min-height: 465px;
+  }
+  #rates .sml .rate-column:nth-of-type(2) {
+    min-height: 280px;
+  }
+  #rates .sml .rate-column:first-of-type {
+    min-height: 215px;
+  }
+}
 @media only screen and (min-width: 448px) {
   #main {
     background-image: url('../images/600-joshua-laptop.jpg');
@@ -481,8 +540,44 @@ These override the primary ('mobile first') styles.
   #toronto-skyline {
     background-image: url('../images/640-toronto-skyline-night.jpg');
   }
+  #rates .rate-intro p {
+    text-align: center;
+    margin: 0 20% 0 20%;
+  }
 }
-
+@media only screen and (min-width:580px) {
+  .overflow-bottom-fifty {
+    top: 0;
+    bottom: -50%;
+    height: 150%;
+    position: relative;
+    z-index: 10;
+  }
+  #contact .contact-info .form-group {
+    width: 50%;
+  }
+  #contact input, #contact textarea {
+    margin: 2px 0;
+  }
+  #contact .contact-info .form-group input {
+    width: 80%;
+  }
+  #contact .contact-info .form-group input:not(.large-button):hover, #contact .contact-info .form-group input:not(.large-button):focus {
+    width: 90%;
+  }
+  #rates {
+    min-height: 1570px;
+  }
+  #rates .vert-row {
+    min-height: 75px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 1420px;
+  }
+  #rates .rate-intro p {
+    margin: 0 15% 0 15%;
+  }
+}
 @media only screen and (min-width: 600px) {
   #main {
     background-image: url('../images/768-joshua-laptop.jpg');
@@ -490,36 +585,29 @@ These override the primary ('mobile first') styles.
   #toronto-skyline {
     background-image: url('../images/800-toronto-skyline-night.jpg');
   }
-}
-
-@media only screen and (max-width: 768px) {
-  .mobile-half-left-section {
-    width: 50%;
-    position: absolute;
-    left: 0;
-    right: 50%;
+  #rates {
+    min-height: 1470px;
   }
-  .mobile-half-right-section {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    right: 0;
-  }
-  .mobile-whole-section {
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-  .mobile-top {
-    top: 0;
-  }
-  #work .mobile-half-left-section, #work .mobile-half-right-section, #work .mobile-whole-section {
-    height: 20%;
+  #rates .vert-eight-twelfth {
+    min-height: 1320px;
   }
 }
-
+@media only screen and (min-width: 630px) {
+  #rates {
+    min-height: 1350px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 1200px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  #rates {
+    min-height: 1200px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 1050px;
+  }
+}
 @media only screen and (min-width: 768px) {
   #main {
     background-image: url('../images/2448-joshua-laptop.jpg');
@@ -527,8 +615,13 @@ These override the primary ('mobile first') styles.
   #toronto-skyline {
     background-image: url('../images/1024-toronto-skyline-night.jpg');
   }
+  #rates {
+    min-height: 1100px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 950px;
+  }
 }
-
 @media only screen and (min-width: 881px) {
   .logo {
     position: relative;
@@ -538,7 +631,10 @@ These override the primary ('mobile first') styles.
     display: none;
   }
   header {
-    min-height: 50px;
+    min-height: 70px;
+  }
+  header:hover, header:active {
+    height: auto;
   }
   .menu {
     text-align: center;
@@ -556,7 +652,7 @@ These override the primary ('mobile first') styles.
     display: none
   }
   .menu a {
-    font-size: 14px
+    font-size: 1.4rem;
   }
   .menu li:not(.menu-btn) {
     width: auto;
@@ -594,39 +690,133 @@ These override the primary ('mobile first') styles.
   .menu .current a {
     padding: 3px 8px
   }
-  .title-switcher p {
-    font-size: 14px;
+  .title-switcher p, .title-switcher a {
+    font-size: .9rem;
   }
-  #work .project, #rates .service {
+  #profile .content {
+    background-color: rgba(0, 153, 153, 0.8);
+  }
+  #profile .content h3 {
+    font-size: 2.2rem;
+  }
+  #profile .content p {
+    font-weight: 700;
+  }
+  #profile .content {
+    border-radius: 10px;
+    padding: 20px 10px 10px;
+  }
+  #work .content, #rates .content, #contact .content, #home-footer .copyright {
     border: none;
+  }
+  #contact {
+    min-height: 700px;
   }
   .logo-link {
     float: left;
   }
   .overflow-top-fifty {
-    margin-top: -50%;
+    top: -50%;
+    bottom: 0;
     height: 150%;
+    position: relative;
+    z-index: 10;
+  }
+  #rates {
+    min-height: 1190px;
+  }
+  #rates .horiz-one-elevnth {
+    max-width: 40px;
+  }
+  #rates .vert-row {
+    min-height: 100px;
+  }
+  #rates .horiz-ten-twelfth {
+    min-width: 844px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 980px;
+  }
+  #rates .rate-intro p {
+    margin: 60px 0 0;
+  }
+  #rates .lrg .rate-column {
+    width: 40%;
+    min-width: 280px;
+  }
+  #rates .lrg .rate-column h4 {
+    font-size: 1.8em;
+  }
+  #rates .lrg .rate-column h5 {
+    font-size: 1.6em;
+  }
+  #rates .lrg .rate-column h6 {
+    font-size: 1.4em;
+  }
+  #rates .lrg .rate-column p, #rates .lrg .rate-column li {
+    font-size: 1.2em;
   }
 }
-
 @media only screen and (min-width: 980px) {
   .menu a {
-    font-size: 16px;
+    font-size: 1.4rem;
   }
 }
-
-@media only screen and (min-width: 1109px) {}
-
-@media only screen and (min-width: 1377px) {}
-
+@media only screen and (min-width: 1042px) {
+  #rates {
+    min-height: 1190px;
+  }
+  #rates .vert-row, #rates .content {
+    min-height: 35px;
+  }
+  #rates .vert-row > .horiz-full {
+    height: inherit;
+  }
+  #rates .rate-intro {
+    margin: 30px 0 0;
+  }
+  #rates .rate-intro p {
+    margin: 0;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 980px;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  #rates {
+    min-height: 1090px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 880px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  #rates {
+    min-height: 990px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 780px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  #rates {
+    min-height: 890px;
+  }
+  #rates .vert-eight-twelfth {
+    min-height: 680px;
+  }
+}
 @media only screen and (min-width: 1654px) {}
-
+@media only screen and (min-width: 1800px) {
+  #rates .horiz-one-elevnth {
+    max-width: 9.09%;
+  }
+}
 @media only screen and (min-width: 2400px) {
   #toronto-skyline {
     background-image: url('../images/2400-toronto-skyline-night.jpg');
   }
 }
-
 @media print, ( -o-min-device-pixel-ratio: 5/4), ( -webkit-min-device-pixel-ratio: 1.25), ( min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }

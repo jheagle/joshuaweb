@@ -1,16 +1,19 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
+
 /*
 * What follows is the result of much research on cross-browser styling.
 * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
 * Kroc Camen, and the H5BP dev community and team.
 */
 
+
 /* ==========================================================================
 Base styles: opinionated defaults
 ========================================================================== */
+
 html {
-  color: #222;
+  color: #444;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -20,11 +23,11 @@ html {
 * These selection rule sets have to be separate.
 * Customize the background color to match your design.
 */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
-
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -33,6 +36,7 @@ html {
 /*
 * A better looking default horizontal rule
 */
+
 hr {
   display: block;
   height: 1px;
@@ -46,13 +50,15 @@ hr {
 * Remove the gap between images, videos, audio and canvas and the bottom of
 * their containers: h5bp.com/i/440
 */
-audio,canvas,img,svg,video {
+
+audio, canvas, img, svg, video {
   vertical-align: middle;
 }
 
 /*
 * Remove default fieldset styles.
 */
+
 fieldset {
   border: 0;
   margin: 0;
@@ -62,17 +68,221 @@ fieldset {
 /*
 * Allow only vertical resizing of textareas.
 */
+
 textarea {
   resize: vertical;
+}
+
+/* =========================================================================
+Custom Styles
+========================================================================== */
+
+
+/* -------------------------------------------
+General styles section
+-------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+  color: #444;
+  line-height: 1.4;
+  background-color: #fff;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* -------------------------------------------
+Header styles section
+-------------------------------------------*/
+
+header {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  min-width: 256px;
+  overflow: auto;
+}
+header:hover, header:active {
+  height: 50%;
+}
+
+/* -------------------------------------------
+Main Content and Layouts styles section
+-------------------------------------------*/
+
+section {
+  background-color: #009999;
+  z-index: 1;
+}
+section .content {
+  background-color: #fff;
+  border: 4px solid #009999;
+  padding: 4px;
+  min-width: 75px;
+  min-height: 75px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+section:nth-of-type(even) {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+}
+section:nth-of-type(even) .content {
+  color: #fff;
+  background-color: #009999;
+  border: 4px solid #fff;
+  -webkit-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  -moz-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  -o-text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------------------------------
+Font Styles
+-------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p, label, input, textarea {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+input, textarea {
+  color: #444;
+  padding: .6rem .4rem;
+  border-radius: .4rem;
+  border: none;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+h1, h2, h3, h4, h5, h6, a, label, dt, input[type='button'], input[type='submit'] {
+  color: #00ccff;
+  font-weight: 700;
+}
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+h6, label, input[type='button'], input[type='submit'] {
+  font-size: 1.6rem;
+}
+h5, h6 {
+  text-decoration: underline;
+}
+p, a, dt, dd {
+  font-size: 1.4rem;
+}
+p {
+  font-weight: 400;
+}
+
+/* -------------------------------------------
+Input styles section
+-------------------------------------------*/
+
+.form-group {
+  margin: 10px 0;
+}
+.form-group label {
+  display: none;
+}
+.form-group input, .form-group textarea {
+  display: inline-block;
+}
+
+/* -------------------------------------------
+Input format styles section
+-------------------------------------------*/
+
+
+/* -------------------
+Validation Styles
+--------------------*/
+
+
+/* ----------------------
+Common Elements
+------------------------*/
+
+.social-links {
+  position: relative;
+  overflow: none;
+  height: 100%;
+}
+.social-links a {
+  display: inline-block;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  height: 45%;
+  min-height: 30px;
+  width: auto;
+  margin: 4px 2px;
+}
+.social-links a img {
+  height: 100%;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.social-links a:hover, .social-links a:focus {
+  opacity: 0.6;
+}
+
+/* -------------------------------------------
+Footer styles section
+-------------------------------------------*/
+
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  height: 140px;
+  background-color: #E5E5E5;
+  background-color: rgba(218, 218, 218, 0.7);
+}
+footer img {
+  margin: 40px auto;
 }
 
 /* ==========================================================================
 Helper classes
 ========================================================================== */
 
+
 /*
 * Hide from both screenreaders and browsers: h5bp.com/u
 */
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -81,6 +291,7 @@ Helper classes
 /*
 * Hide only visually, but have it available for screenreaders: h5bp.com/v
 */
+
 .visuallyhidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -96,7 +307,8 @@ Helper classes
 * Extends the .visuallyhidden class to allow the element to be focusable
 * when navigated to via the keyboard: h5bp.com/p
 */
-.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -108,6 +320,7 @@ Helper classes
 /*
 * Hide visually and from screenreaders, but maintain layout
 */
+
 .invisible {
   visibility: hidden;
 }
@@ -123,11 +336,13 @@ Helper classes
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
-.clearfix:before,.clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
-}
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
 .clearfix:after {
   clear: both;
 }
@@ -135,109 +350,71 @@ Helper classes
 /* ==========================================================================
 These override the primary ('mobile first') styles.
 ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
 
-@media only screen and (min-height: 311px ) {
-}
-
-@media only screen and (min-height: 350px ) {
-}
-
-@media only screen and (min-height: 411px ) {
-}
-
-@media only screen and (min-width: 314px){
-}
-
-@media only screen and (min-width: 448px){
-}
-
-@media only screen and (min-width: 600px){
-}
-
-@media only screen and (max-width: 768px){
-}
-
-@media only screen and (min-width: 768px){
-}
-
-@media only screen and (min-width: 881px ) {
-}
-
-@media only screen and (min-width: 980px ) {
-}
-
-@media only screen and (min-width: 1109px ) {
-
-}
-
-@media only screen and (min-width: 1377px ) {
-
-}
-
-@media only screen and (min-width: 1654px ) {
-
-}
-
-@media only screen and (min-width: 2400px){
-}
-
-@media print , ( -o-min-device-pixel-ratio : 5/4) , (
-  -webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media only screen and (min-width:580px) {
+  html {
+    font-size: 75.8%;
   }
+}
+@media only screen and (min-width: 881px) {
+  html {
+    font-size: 86.1%;
+  }
+}
+@media print, ( -o-min-device-pixel-ratio: 5/4), ( -webkit-min-device-pixel-ratio: 1.25), ( min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
 
-  /* ==========================================================================
+/* ==========================================================================
   Print styles.
   Inlined to avoid required HTTP connection: h5bp.com/r
   ========================================================================== */
-  @media print {
-    * {
-      background: transparent !important;
-      color: #000 !important; /* Black prints faster: h5bp.com/s */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-    a,a:visited {
-      text-decoration: underline;
-    }
-    a[href]:after {
-      content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
 
-    /*
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
     * Don't show links for images, or javascript/internal links
     */
-    a[href^="javascript:"]:after,a[href^="#"]:after {
-      content: "";
-    }
-    pre,blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-    thead {
-      display: table-header-group; /* h5bp.com/t */
-    }
-    tr,img {
-      page-break-inside: avoid;
-    }
-    img {
-      max-width: 100% !important;
-    }
-    p,h2,h3 {
-      orphans: 3;
-      widows: 3;
-    }
-    h2,h3 {
-      page-break-after: avoid;
-    }
+  a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
   }
-
-  @-ms-viewport{
-    width: device-width;
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
   }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+@-ms-viewport {
+  width: device-width;
+}

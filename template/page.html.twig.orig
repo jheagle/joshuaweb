@@ -45,13 +45,27 @@
  * @ingroup themeable
  */
 #}
+<div class="layout-container">
 
   <header role="banner">
-</header>
+    {{ page.header }}
+  </header>
 
-    <section class='full-section'>
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
       {{ page.content }}
-    </section>{# /.layout-content #}
+    </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
@@ -65,8 +79,12 @@
       </aside>
     {% endif %}
 
+  </main>
+
   {% if page.footer %}
     <footer role="contentinfo">
       {{ page.footer }}
     </footer>
   {% endif %}
+
+</div>{# /.layout-container #}
