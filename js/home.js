@@ -36,6 +36,75 @@
       menuItems.parent().removeClass("current").end().filter("[href=#" + id + "]").parent().addClass("current");
     }
   });
+  var $form = $('.form');
+  $form.submit(function() {
+    $('.success-status').removeClass('success-status');
+    $('.error-status').removeClass('error-status');
+    $(".error-msg").remove();
+    var error = false,
+      phoneError = "",
+      tel = 0;
+    if ($("#name").val() === "") {
+      error = true;
+      $("#name").addClass("error-status");
+      $("#name").parent().append("<ul class='error-msg'><li>Please enter your name.</li></ul>");
+    } else {
+      $("#name").addClass("success-status");
+    }
+
+    if ($("#email").val() === "") {
+      error = true;
+      $("#email").addClass("error-status");
+      $("#email").parent().append("<ul class='error-msg'><li>Please enter your email address.</li></ul>");
+    } else if (($("#email").val().match(/.+@.+\..+/i) || []).length < 1) {
+      error = true;
+      $("#email").addClass("error-status");
+      $("#email").parent().append("<ul class='error-msg'><li>The email address must match similar format to 'name@domain.com'.</li></ul>");
+    } else {
+      $("#email").addClass("success-status");
+    }
+
+    if ($("#phone").val() === "") {
+      phoneError += "<li>Please enter your phone number.</li>";
+    }
+
+    if ($("#phone").val().length < 10) {
+      phoneError += "<li>The phone number must be at least ten (10) digits</li>";
+    }
+
+    var num = $('#phone').val().replace(/\D/g, '');
+    if (!$.isNumeric(num)) {
+      phoneError += "<li>The phone number can only contain numbers.</li>";
+    }
+
+    if (phoneError.length > 0) {
+      error = true;
+      $("#phone").addClass("error-status");
+      $("#phone").parent().append("<ul class='error-msg'>" + phoneError + "</ul>");
+    } else {
+      $("#phone").addClass("success-status");
+    }
+
+    if ($("#message").val().trim() === "") {
+      error = true;
+      $("#message").addClass("error-status");
+      $("#message").parent().append("<ul class='error-msg'><li>Please describe your request.</li></ul>");
+    } else {
+      $("#message").addClass("success-status");
+    }
+
+    if (!error) {
+      var formDiv = $form.parent();
+      $.post($(this).attr('action'), $(this).serialize(), function(response) {
+        // on success
+      }, 'json');
+      $form.fadeOut(1000, function() {
+        formDiv.append("<div class='request-sent'><p>Thank you contacting me. I look forward to working together</p></div>");
+      });
+    }
+
+    return false;
+  });
 })(jQuery);
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 var isIE = /*@cc_on!@*/ false;
