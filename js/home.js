@@ -64,25 +64,23 @@
       $("#email").addClass("success-status");
     }
 
-    if ($("#phone").val() === "") {
-      phoneError += "<li>Please enter your phone number.</li>";
-    }
+    if ($("#phone").val() !== "") {
+      if ($("#phone").val().length < 10) {
+        phoneError += "<li>The phone number must be at least ten (10) digits</li>";
+      }
 
-    if ($("#phone").val().length < 10) {
-      phoneError += "<li>The phone number must be at least ten (10) digits</li>";
-    }
+      var num = $('#phone').val().replace(/\D/g, '');
+      if (!$.isNumeric(num)) {
+        phoneError += "<li>The phone number can only contain numbers.</li>";
+      }
 
-    var num = $('#phone').val().replace(/\D/g, '');
-    if (!$.isNumeric(num)) {
-      phoneError += "<li>The phone number can only contain numbers.</li>";
-    }
-
-    if (phoneError.length > 0) {
-      error = true;
-      $("#phone").addClass("error-status");
-      $("#phone").parent().append("<ul class='error-msg'>" + phoneError + "</ul>");
-    } else {
-      $("#phone").addClass("success-status");
+      if (phoneError.length > 0) {
+        error = true;
+        $("#phone").addClass("error-status");
+        $("#phone").parent().append("<ul class='error-msg'>" + phoneError + "</ul>");
+      } else {
+        $("#phone").addClass("success-status");
+      }
     }
 
     if ($("#message").val().trim() === "") {

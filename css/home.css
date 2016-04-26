@@ -465,7 +465,6 @@ Section Styles
 #contact .large-button {
   width: 100%;
   height: 100%;
-  border: none;
   background-color: #fff;
   font-size: 2.6rem;
 }
@@ -474,7 +473,6 @@ Section Styles
   height: 121%;
   font-size: 2.8rem;
   margin: -1% -2% 0;
-  border: none;
   -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
   -o-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);

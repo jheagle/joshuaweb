@@ -177,6 +177,9 @@ h1, h2, h3, h4, h5, h6, a, label, dt, input[type='button'], input[type='submit']
   color: #00ccff;
   font-weight: 700;
 }
+input[type='button'], input[type='submit'] {
+  border: 1px solid #00ccff;
+}
 h1 {
   font-size: 3.2rem;
 }
@@ -194,9 +197,6 @@ h5 {
 }
 h6, label, input[type='button'], input[type='submit'] {
   font-size: 1.6rem;
-}
-h5, h6 {
-  text-decoration: underline;
 }
 p, a, dt, dd {
   font-size: 1.4rem;
