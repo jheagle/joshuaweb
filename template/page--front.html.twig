@@ -1,9 +1,6 @@
-<header>
-  <nav>
-    <ul class='menu'>
-      <li class='menu-btn'>
-        <a title='Quickly get to where you want.' href='#'>Menu</a>
-      </li>
+<header class='hover'>
+  <nav class='vert-row'>
+    <ul class='menu lrg'>
       <li class='current'>
         <a href='#intro'>Hello</a>
       </li>
@@ -17,6 +14,26 @@
         <a href='#rates'>Price Your Project</a>
       </li>
       <li>
+        <a href='#contact'>Contact Me</a>
+      </li>
+    </ul>
+    <ul class='menu sml med hover'>
+      <li class='menu-btn'>
+        <span></span>
+      </li>
+      <li class='current third-menu'>
+        <a href='#intro'>Hello</a>
+      </li>
+      <li class='two-third-menu'>
+        <a href='#work'>See My Work</a>
+      </li>
+      <li class='third-menu'>
+        <a href='#profile'>Meet Me</a>
+      </li>
+      <li class='two-third-menu'>
+        <a href='#rates'>Price Your Project</a>
+      </li>
+      <li class='full-menu'>
         <a href='#contact'>Contact Me</a>
       </li>
     </ul>
@@ -188,11 +205,11 @@
   </div>
   <div class='vert-row vert-one-twelfth sml med social-overlay'>
     <div class='horiz-column horiz-full'>
-        <p class='social-links'>Follow and contribute to my projects:
-          <a href="https://github.com/jheagle" target="_BLANK" title="Visit Joshua's GitHub page">
-            <img src="{{ base_path ~ directory }}/images/github-icon.png" alt="Developer projects of Joshua Heagle" title="Full working projects on GitHub"/>
-          </a>
-        </p>
+      <p class='social-links'>Follow and contribute to my projects:
+        <a href="https://github.com/jheagle" target="_BLANK" title="Visit Joshua's GitHub page">
+          <img src="{{ base_path ~ directory }}/images/github-icon.png" alt="Developer projects of Joshua Heagle" title="Full working projects on GitHub"/>
+        </a>
+      </p>
     </div>
   </div>
   <div class='vert-row vert-one-eighth lrg'>
@@ -217,7 +234,7 @@
     </div>
     <div class='horiz-column horiz-ten-twelfth horiz-full'>
       <div class='vert-one-twelfth lrg'></div>
-      <div class='vert-row vert-one-twelfth vert-two-twelfth'>
+      <div class='vert-row vert-one-twelfth vert-two-twelfth rates-head'>
         <div class='horiz-full content rate-intro'>
           <p>Let's get started. All projects will be assessed as follows:</p>
         </div>
@@ -344,7 +361,7 @@
         </div>
       </div>
       <div class='vert-one-twelfth lrg'></div>
-      <div class='vert-row vert-one-twelfth vert-two-twelfth'>
+      <div class='vert-row vert-one-twelfth vert-two-twelfth rates-foot'>
         <div class='horiz-full content'>
           <p>Let's start your project
             <span class='double-underline'>TODAY</span>!
@@ -454,16 +471,16 @@
     </div>
   </form>
 </section>
-<footer id='home-footer' class='vert-row vert-one-fifth'>
+<footer id='home-footer' class='vert-row vert-one-quarter'>
   <div class='horiz-one-twelfth lrg'></div>
   <div class='horiz-column horiz-ten-twelfth horiz-full'>
     <div class='vert-one-twelfth lrg'></div>
     <div class='vert-row vert-ten-twelfth vert-full copyright'>
       <div class='hoirz-column horiz-full'>
-        <div class='vert-one-half copyright-info'>
+        <div class='vert-one-third copyright-info'>
           <p>Joshua Web Strategy &copy; 2016</p>
         </div>
-        <div class='vert-one-half social-links'>
+        <div class='vert-one-third social-links'>
           <a href="http://ca.linkedin.com/in/joshuaheagle" target="_BLANK" title="Join Joshua's network on LinkedIn">
             <img src="{{ base_path ~ directory }}/images/linkedin-icon.png" alt="Professional profile of Joshua Heagle" title="Network with the programmer on LinkedIn"/>
           </a>
@@ -483,6 +500,7 @@
             <img src="{{ base_path ~ directory }}/images/localsolo-icon.png" alt="LocalSolo Freelance">
           </a>
         </div>
+        <div class='vert-one-third copyright-info'></div>
       </div>
     </div>
     <div class='vert-one-twelfth lrg'></div>

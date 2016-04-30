@@ -16,7 +16,8 @@
       550,
       function() {
         if (location.hash !== href)
-          window.location.hash = href;
+          adjustMain(href);
+        window.location.hash = href;
       });
     menuItems.parent().removeClass("current");
     $(this).parent().addClass("current");
@@ -33,9 +34,28 @@
     var id = cur && cur.length ? cur[0].id : "";
     if (lastId !== id) {
       lastId = id;
+      adjustMain(id);
       menuItems.parent().removeClass("current").end().filter("[href=#" + id + "]").parent().addClass("current");
     }
   });
+
+  function adjustMain(href) {
+    if (href === 'intro') {
+      $('#main').css({
+        position: 'fixed'
+      });
+    } else {
+      $('#main').css({
+        position: 'absolute'
+      });
+    }
+  }
+
+  $('header').on('click', '.menu-btn', function() {
+    $(this).parent().toggleClass('hover');
+    $('header').toggleClass('hover');
+  });
+
   var $form = $('.form');
   $form.submit(function() {
     $('.success-status').removeClass('success-status');

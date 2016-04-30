@@ -114,9 +114,6 @@ header {
   min-width: 256px;
   overflow: auto;
 }
-header:hover, header:active {
-  height: 50%;
-}
 
 /* -------------------------------------------
 Main Content and Layouts styles section

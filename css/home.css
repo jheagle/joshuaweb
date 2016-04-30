@@ -57,98 +57,163 @@ Joshua Heagle's custom styles for Joshua Web Strategy
 Menu styles section
 -------------------------------------------*/
 
+header {
+  bottom: 0;
+  top: auto;
+  height: 40px;
+  transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
+}
+/*header:hover, header:active, header.hover {
+  height: 160px;
+}*/
+header.hover {
+  height: 160px;
+}
 .menu {
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 100px;
+  width: 100%;
+  height: 40px;
   position: fixed;
-  top: 6px;
-  left: 6px;
-  transition: width .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
 .menu .menu-btn {
   margin: 0;
+  display: flex;
+  width: 100%;
+  color: #00ccff;
+  font-size: 1.4rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  align-items: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.menu .menu-btn span {
+  content: "";
   display: block;
-  width: 75px;
+  height: 2px;
+  width: 50%;
+  background-color: #00ccff;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+.menu .menu-btn span:after, .menu .menu-btn span:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #00ccff;
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+.menu .menu-btn span:before {
+  top: 10px;
+  left: -25%;
+  width: 150%;
+}
+.menu .menu-btn span:after {
+  top: -12px;
+  width: 50%;
 }
 .menu a {
   color: #00ccff;
   font-size: 1.4rem;
 }
 .menu li {
+  height: 40px;
   list-style: none;
-  margin: 2px;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #00ccff;
-  transition: background-color .3s linear;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  font-size: 1rem;
+  display: inline-block;
 }
 .menu li a {
   display: block;
   padding: 10px 16px;
-  transition: color 0.4s linear;
+  transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
 .menu li:not(.menu-btn) {
-  width: 100%;
-  height: 0;
-  margin: -1px 0 0;
-  border: 0;
-  font-size: 0rem;
-  visibility: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transition: all .2s linear;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #00ccff;
+  transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
-.menu li:not(.menu-btn) a {
-  padding: 0;
+.menu .full-menu {
+  width: 100%;
+}
+.menu .half-menu {
+  width: calc(50% - 2px);
+}
+.menu .third-menu {
+  width: calc(36% - 1px);
+}
+.menu .two-third-menu {
+  width: calc(64% - 2px);
 }
 .menu .current {
   border: 1px solid #fff;
   background-color: #00ccff;
+  color: #fff;
 }
 .menu .current a {
   color: #fff;
+  background-color: #00ccff;
   padding: 9px 15px;
-}
-.menu:hover li:not(.menu-btn), .menu:active li:not(.menu-btn) {
-  height: 40px;
-  margin: 2px;
-  border: 1px solid #00ccff;
-  font-size: 1rem;
-  visibility: visible;
-  -webkit-user-select: all;
-  /* Chrome all / Safari all */
-  -moz-user-select: all;
-  /* Firefox all */
-  -ms-user-select: all;
-  /* IE 10+ */
-  user-select: all;
 }
 .menu:hover li.current, .menu:active li.current {
   border: 1px solid #ffffff;
+  background-color: #00ccff;
+  color: #fff;
 }
-.menu:hover li:not(.menu-btn) a, .menu:active li:not(.menu-btn) a {
-  padding: 10px 16px;
+.menu:hover .current a, .menu:active .current a {
+  color: #fff;
+  background-color: #00ccff;
+  padding: 9px 15px;
 }
-.menu:active .menu-btn, .menu:hover .menu-btn {
-  margin-left: 0;
+/*.menu:active, .menu:hover, .menu.hover {
+  height: 160px;
+}*/
+.menu.hover {
+  height: 160px;
 }
-.menu:active, .menu:hover {
-  width: calc(100% - 12px);
-}
-.menu li:hover {
+.menu li:not(.menu-btn):hover, .menu li:not(.menu-btn):active {
   border: 1px solid #fff;
   background-color: #00ccff;
-}
-.menu li:hover a {
   color: #fff;
+}
+.menu li:hover a, .menu li:active a {
+  color: #fff;
+}
+.menu li:hover span, .menu li:active span, .menu li:hover span:before, .menu li:active span:before, .menu li:hover span:after, .menu li:active span:after {
+  background-color: #fff;
+}
+/*.menu:hover .menu-btn span:before, .menu:active .menu-btn span:before, .menu.hover .menu-btn span:before {
+  top: -12px;
+}
+.menu:hover .menu-btn span:after, .menu:active .menu-btn span:after, .menu.hover .menu-btn span:after {
+  top: 10px;
+}*/
+.menu.hover .menu-btn span:before {
+  top: -12px;
+}
+.menu.hover .menu-btn span:after {
+  top: 10px;
 }
 
 /* ---------------------------------
@@ -274,14 +339,14 @@ Section Styles
   position: absolute;
 }
 #work .social-overlay {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   z-index: 10;
 }
 #work .social-links {
   color: #fff;
 }
-#work .social-overlay p{
+#work .social-overlay p {
   color: #444;
   background-color: rgba(0, 153, 153, 0.7);
 }
@@ -338,11 +403,12 @@ Section Styles
 }
 #rates {
   min-height: 1540px;
+  min-height: 1580px;
 }
 #rates .content {}
 #rates .rate-intro p {
-  text-align: left;
-  margin: 0 0 0 30%;
+  text-align: center;
+  margin: 0 auto;
 }
 #rates .rate-column {
   text-align: left;
@@ -355,13 +421,16 @@ Section Styles
   margin-top: 1.2rem;
 }
 #rates .sml .rate-column {
-  min-height: 620px;
+  min-height: 680px;
 }
 #rates .sml .rate-column:nth-of-type(2) {
   min-height: 420px;
 }
 #rates .sml .rate-column:first-of-type {
   min-height: 320px;
+}
+#rates .rates-head, #rates .rates-foot {
+  height: auto;
 }
 #rates .sml .rate-column h4, #rates .sml .rate-column h5, #rates .sml .rate-column h6, #rates .sml .rate-column p {
   display: inline-block;
@@ -385,7 +454,7 @@ Section Styles
   list-style: none;
 }
 #contact {
-  min-height: 450px;
+  min-height: 650px;
 }
 #contact .content {
   padding: 0;
@@ -401,7 +470,7 @@ Section Styles
   padding: 60px 5px 5px;
 }
 #contact .company-contact {
-  padding: 0 8px;
+  padding: 8px;
 }
 #contact h3, #contact h4, #contact a {
   opacity: 1;
@@ -411,7 +480,7 @@ Section Styles
   opacity: .6;
 }
 #contact .sml .company-contact {
-  text-align: right;
+  text-align: center;
   font-size: 1.4rem;
 }
 #contact .lrg .company-contact {
@@ -481,6 +550,7 @@ Section Styles
 #home-footer {
   z-index: 1;
   background-color: #fff;
+  min-height: 120px;
 }
 #home-footer .copyright {
   color: #fff;
@@ -511,10 +581,7 @@ These override the primary ('mobile first') styles.
     background-image: url('../images/448-toronto-skyline-night.jpg');
   }
   #contact .company-contact {
-    padding: 0 30px;
-  }
-  #rates .rate-intro p {
-    margin: 0 30px 0 30%;
+    padding: 12px 30px;
   }
 }
 @media only screen and (min-width: 344px) {
@@ -630,8 +697,10 @@ These override the primary ('mobile first') styles.
   }
   header {
     min-height: 70px;
+    bottom: auto;
+    top: 0;
   }
-  header:hover, header:active {
+  header:hover, header:active, header.hover {
     height: auto;
   }
   .menu {
@@ -645,9 +714,7 @@ These override the primary ('mobile first') styles.
   }
   .menu:hover, .menu:active {
     width: 100%;
-  }
-  .menu .menu-btn, .menu:active .menu-btn, .menu:hover .menu-btn {
-    display: none
+    height: auto;
   }
   .menu a {
     font-size: 1.4rem;
