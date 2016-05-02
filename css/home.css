@@ -63,9 +63,11 @@ header {
   height: 40px;
   transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
+
 /*header:hover, header:active, header.hover {
   height: 160px;
 }*/
+
 header.hover {
   height: 160px;
 }
@@ -184,11 +186,12 @@ header.hover {
 .menu:hover .current a, .menu:active .current a {
   color: #fff;
   background-color: #00ccff;
-  padding: 9px 15px;
 }
+
 /*.menu:active, .menu:hover, .menu.hover {
   height: 160px;
 }*/
+
 .menu.hover {
   height: 160px;
 }
@@ -203,17 +206,27 @@ header.hover {
 .menu li:hover span, .menu li:active span, .menu li:hover span:before, .menu li:active span:before, .menu li:hover span:after, .menu li:active span:after {
   background-color: #fff;
 }
+
 /*.menu:hover .menu-btn span:before, .menu:active .menu-btn span:before, .menu.hover .menu-btn span:before {
   top: -12px;
 }
 .menu:hover .menu-btn span:after, .menu:active .menu-btn span:after, .menu.hover .menu-btn span:after {
   top: 10px;
 }*/
+
 .menu.hover .menu-btn span:before {
   top: -12px;
 }
 .menu.hover .menu-btn span:after {
   top: 10px;
+}
+.menu > .med, .menu > .lrg {
+  display: none;
+  *zoom: 0;
+}
+.menu > .sml, .menu > .sml {
+  display: inline-block;
+  *zoom: 1;
 }
 
 /* ---------------------------------
@@ -642,6 +655,14 @@ These override the primary ('mobile first') styles.
   #rates .rate-intro p {
     margin: 0 15% 0 15%;
   }
+  .menu > .sml, .menu > .lrg {
+    display: none;
+    *zoom: 0;
+  }
+  .menu > .med, .menu > .med {
+    display: inline-block;
+    *zoom: 1;
+  }
 }
 @media only screen and (min-width: 600px) {
   #main {
@@ -713,7 +734,6 @@ These override the primary ('mobile first') styles.
     transition: none
   }
   .menu:hover, .menu:active {
-    width: 100%;
     height: auto;
   }
   .menu a {
@@ -722,38 +742,20 @@ These override the primary ('mobile first') styles.
   .menu li:not(.menu-btn) {
     width: auto;
     height: auto;
-    border: 1px solid #00ccff;
-    display: inline-block;
-    margin: 0;
-    visibility: visible;
     transition: all .6s ease-in-out;
   }
   .menu li:not(.menu-btn) a {
-    display: block;
     padding: 4px 9px
-  }
-  .menu li.current {
-    border: 1px solid #ffffff;
   }
   .menu:hover li:not(.menu-btn), .menu:active li:not(.menu-btn) {
     width: auto;
     height: auto;
-    border: 1px solid #00ccff;
-    display: inline-block;
-    margin: 0;
-  }
-  .menu:hover li:not(.menu-btn) a, .menu:active li:not(.menu-btn) a {
-    display: block;
-    padding: 4px 9px
   }
   .menu:hover li.current, .menu:active li.current {
     border: 1px solid #ffffff;
   }
-  .menu:hover {
-    width: 100%;
-  }
-  .menu .current a {
-    padding: 3px 8px
+  .menu.hover {
+    height: auto;
   }
   .title-switcher p, .title-switcher a {
     font-size: .9rem;
@@ -820,6 +822,14 @@ These override the primary ('mobile first') styles.
   }
   #rates .lrg .rate-column p, #rates .lrg .rate-column li {
     font-size: 1.2em;
+  }
+  .menu > .sml, .menu > .med {
+    display: none;
+    *zoom: 0;
+  }
+  .menu > .lrg, .menu > .lrg {
+    display: inline-block;
+    *zoom: 1;
   }
 }
 @media only screen and (min-width: 980px) {
