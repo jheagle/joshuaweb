@@ -228,6 +228,9 @@ header.hover {
   display: inline-block;
   *zoom: 1;
 }
+.menu .menu-btn {
+  display: flex;
+}
 
 /* ---------------------------------
 Section Styles
@@ -662,6 +665,9 @@ These override the primary ('mobile first') styles.
   .menu > .med, .menu > .med {
     display: inline-block;
     *zoom: 1;
+  }
+  .menu .menu-btn {
+    display: flex;
   }
 }
 @media only screen and (min-width: 600px) {
