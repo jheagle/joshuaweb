@@ -64,10 +64,6 @@ header {
   transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
 
-/*header:hover, header:active, header.hover {
-  height: 160px;
-}*/
-
 header.hover {
   height: 160px;
 }
@@ -725,7 +721,6 @@ These override the primary ('mobile first') styles.
   header {
     min-height: 70px;
     bottom: auto;
-    top: 0;
   }
   header:hover, header:active, header.hover {
     height: auto;

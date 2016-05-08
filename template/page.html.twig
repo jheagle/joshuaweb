@@ -46,12 +46,18 @@
  */
 #}
 
-  <header role="banner">
-</header>
+    {{ page.header }}
 
-    <section class='full-section'>
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
       {{ page.content }}
-    </section>{# /.layout-content #}
 
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
