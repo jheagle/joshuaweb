@@ -1,0 +1,37 @@
+#block-joshuawebstrategy-search, #block-joshuawebstrategy-breadcrumbs, #block-joshuawebstrategy-main-menu, #block-joshuawebstrategy-branding, #block-joshuawebstrategy-account-menu, #block-joshuawebstrategy-powered {
+  display: none;
+}
+#block-joshuawebstrategy-search, #block-joshuawebstrategy-breadcrumbs, #block-joshuawebstrategy-main-menu, #block-joshuawebstrategy-account-menu, #block-joshuawebstrategy-powered {
+  display: inline-block;
+}
+#block-joshuawebstrategy-search {
+  position: absolute;
+  right: 10px;
+}
+#block-joshuawebstrategy-search h2 {
+  display: none;
+}
+#block-joshuawebstrategy-search form > div {
+  margin: 4px 0 0 12px;
+  display: inline-block;
+}
+#block-joshuawebstrategy-search form > div input:not([type='submit']) {
+  box-shadow: none;
+  border: 1px solid #eee;
+  border-bottom: 1px solid #00ccff;
+}
+#block-joshuawebstrategy-search form > div input[type='submit'] {
+  box-shadow: none;
+  font-size: 10px;
+  font-size: 1rem;
+}
+#user-login-form {
+  width: 100%;
+  margin: 30px 0;
+}
+#user-login-form input {
+  max-width: 400px;
+}
+#user-login-form input[type='submit'] {
+  max-width: 510px;
+}

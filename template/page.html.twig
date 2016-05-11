@@ -45,7 +45,7 @@
  * @ingroup themeable
  */
 #}
-
+<header>
     {{ page.header }}
 
   {{ page.primary_menu }}
@@ -56,9 +56,7 @@
   {{ page.highlighted }}
 
   {{ page.help }}
-
-      {{ page.content }}
-
+</header>
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar_first }}
@@ -70,7 +68,11 @@
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-
+<main>
+  <section>
+          {{ page.content }}
+  </section>
+</main>
   {% if page.footer %}
     <footer role="contentinfo">
       {{ page.footer }}

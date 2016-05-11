@@ -94,6 +94,7 @@ html, body {
   margin: 0;
   padding: 0;
   position: absolute;
+  text-align: center;
 }
 a {
   outline: none;
@@ -111,6 +112,18 @@ header {
   position: fixed;
   z-index: 9999;
   min-width: 256px;
+  overflow: auto;
+}
+
+/* -------------------------------------------
+Main styles section
+-------------------------------------------*/
+
+main {
+  padding: 70px 0 10px;
+  display: block;
+  min-height: 100%;
+  width: 100%;
   overflow: auto;
 }
 
@@ -163,17 +176,16 @@ input, textarea {
   color: #444;
   padding: .6rem .4rem;
   border-radius: .4rem;
-  border: none;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid #eee;
+  border-bottom: 1px solid #00ccff;
+  width: 100%;
 }
 h1, h2, h3, h4, h5, h6, a, label, dt, input[type='button'], input[type='submit'] {
   color: #00ccff;
   font-weight: 700;
 }
 input[type='button'], input[type='submit'] {
+  background-color: #fff;
   border: 1px solid #00ccff;
 }
 h1 {
@@ -263,8 +275,6 @@ footer {
   position: relative;
   bottom: 0;
   height: 140px;
-  background-color: #E5E5E5;
-  background-color: rgba(218, 218, 218, 0.7);
 }
 footer img {
   margin: 40px auto;

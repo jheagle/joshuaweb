@@ -5,6 +5,7 @@ global-includes:
       css/grid.css: {}
       css/grid-medium.css: {}
       css/grid-large.css: {}
+      css/page.css: {}
   js:
     js/main.js: {}
     js/plugins.js: {}
@@ -15,6 +16,8 @@ home-includes:
   css:
     theme:
       css/home.css: {}
+    remove:
+      css/page.css: {}
   js:
     js/home.js: {}
     js/title-switcher.min.js: {}
