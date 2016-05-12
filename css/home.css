@@ -774,7 +774,7 @@ These override the primary ('mobile first') styles.
     border-radius: 10px;
     padding: 20px 10px 10px;
   }
-  #work .content, #rates .content, #contact .content, #home-footer .copyright {
+  #home-footer .copyright {
     border: none;
   }
   #contact {
