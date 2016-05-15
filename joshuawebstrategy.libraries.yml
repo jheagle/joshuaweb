@@ -16,8 +16,6 @@ home-includes:
   css:
     theme:
       css/home.css: {}
-    remove:
-      css/page.css: {}
   js:
     js/home.js: {}
     js/title-switcher.min.js: {}
