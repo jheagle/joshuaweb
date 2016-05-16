@@ -1,8 +1,25 @@
 #block-joshuawebstrategy-search, #block-joshuawebstrategy-breadcrumbs, #block-joshuawebstrategy-main-menu, #block-joshuawebstrategy-branding, #block-joshuawebstrategy-account-menu, #block-joshuawebstrategy-powered {
   display: none;
 }
-#block-joshuawebstrategy-search, #block-joshuawebstrategy-breadcrumbs, #block-joshuawebstrategy-main-menu, #block-joshuawebstrategy-account-menu, #block-joshuawebstrategy-powered {
+#block-joshuawebstrategy-search, #block-joshuawebstrategy-breadcrumbs, #block-joshuawebstrategy-main-menu, #block-joshuawebstrategy-branding, #block-joshuawebstrategy-account-menu, #block-joshuawebstrategy-powered {
   display: inline-block;
+}
+#block-joshuawebstrategy-branding {
+  position: absolute;
+  left: 10px;
+}
+#block-joshuawebstrategy-branding a {
+  display: inline-block;
+  width: 70px;
+  padding: none;
+}
+#block-joshuawebstrategy-branding a img {
+  width: 100%;
+  height: auto;
+  vertical-align: inherit;
+}
+#block-joshuawebstrategy-branding a:last-child {
+  display: none;
 }
 #block-joshuawebstrategy-search {
   /*position: absolute;
