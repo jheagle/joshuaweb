@@ -152,16 +152,16 @@ header.hover {
   transition: height .4s cubic-bezier(0.15, 0.72, 1, -0.82) .2s;
 }
 .menu .full-menu {
-  width: 100%;
+  width: 99%;
 }
 .menu .half-menu {
-  width: calc(50% - 2px);
+  width: calc(49.5% - 2px);
 }
 .menu .third-menu {
-  width: calc(36% - 1px);
+  width: calc(33% - 1px);
 }
 .menu .two-third-menu {
-  width: calc(64% - 2px);
+  width: calc(66% - 2px);
 }
 .menu .current {
   border: 1px solid #fff;
